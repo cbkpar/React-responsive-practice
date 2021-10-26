@@ -1,0 +1,11 @@
+.box {
+  width: 70%;
+  height: 300px;
+  background: #fdf;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.2rem;
+}
