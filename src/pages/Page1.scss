@@ -1,0 +1,50 @@
+.Page1 {
+  
+  .box {
+    width: 90%;
+    height: 300px;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 1.2rem;
+    text-align: center;
+    }
+
+  @media screen and (min-width: 1281px) {
+    .box {
+      background: #FFAFB0;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .box {
+      background: #F2CFA5;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .box {
+      background: #FDFA87;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .box {
+      background: #BEE9B4;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .box {
+      background: #AEE4FF;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .box {
+      background: #B5C7ED;
+    }
+  }
+}

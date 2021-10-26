@@ -1,0 +1,16 @@
+#container {
+  width: 95%;
+  margin: 0 auto;
+
+  > header {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  > section {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

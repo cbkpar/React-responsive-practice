@@ -1,5 +1,5 @@
 import React from 'react'
-import './Page1.css';
+import './Page1.scss';
 import { useMediaQuery } from 'react-responsive'
 
 function Page1() {
@@ -26,7 +26,7 @@ function Page1() {
   }
 
   return (
-    <div>
+    <div className="Page1">
       <div className="box">
         <Widedesktop><p>넓은 데스크탑 (너비 1280px 보다 같거나 큼)</p></Widedesktop>
         <Desktop><p>데스크탑 (너비 1024px 보다 같거나 큼)</p></Desktop>
