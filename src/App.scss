@@ -3,9 +3,17 @@
   margin: 0 auto;
 
   > header {
+    display: flex;
     width: 80%;
     margin: 0 auto;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width : 100px;
+      height : 30px;
+      margin: 20px;
+    }
   }
 
   > section {

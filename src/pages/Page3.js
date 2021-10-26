@@ -1,16 +1,17 @@
 import React from 'react'
-import './Page2.scss';
+import './Page3.scss';
 
-function Page2() {
+function Page3() {
 
   return (
-    <div className="Page2">
+    <div className="Page3">
       <header></header>
       <nav></nav>
       <section></section>
+      <article></article>
       <footer></footer>
     </div>
   );
 }
 
-export default Page2;
+export default Page3;
