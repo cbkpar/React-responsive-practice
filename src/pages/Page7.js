@@ -78,6 +78,7 @@ function Page7() {
           </div>
         </div>
       </nav>
+      {/* 서브타이틀 */}
       <article id="title">
         <div className="container">
           <div class="title">
@@ -89,31 +90,31 @@ function Page7() {
           </div>
         </div>
       </article>
-      <section>
-        <h2>반응형 사이트 컨텐츠</h2>
-        <section>
-          <h3>반응형 사이트 왼쪽</h3>
-          <article>
-            <h4>반응형 사이트 왼쪽 컨텐츠1</h4>
-            <h4>반응형 사이트 왼쪽 컨텐츠2</h4>
-            <h4>반응형 사이트 왼쪽 컨텐츠3</h4>
-          </article>
-        </section>
-        <section>
-          <h3>반응형 사이트 가운데</h3>
-          <h4>반응형 사이트 가운데 컨텐츠1</h4>
-          <h4>반응형 사이트 가운데 컨텐츠2</h4>
-          <h4>반응형 사이트 가운데 컨텐츠3</h4>
-        </section>
-        <section>
-          <h3>반응형 사이트 오른쪽</h3>
-          <h4>반응형 사이트 오른쪽 컨텐츠1</h4>
-          <h4>반응형 사이트 오른쪽 컨텐츠2</h4>
-          <h4>반응형 사이트 오른쪽 컨텐츠3</h4>
-        </section>
+      {/* 본문 */}
+      <section id="contents">
+        <div className="container">
+          <section id="cont_left">
+            <article className="column"><h4>반응형 사이트 왼쪽 컨텐츠1</h4></article>
+            <article className="column"><h4>반응형 사이트 왼쪽 컨텐츠2</h4></article>
+            <article className="column"><h4>반응형 사이트 왼쪽 컨텐츠3</h4></article>
+          </section>
+          <section id="cont_center">
+            <article className="column"><h4>반응형 사이트 가운데 컨텐츠1</h4></article>
+            <article className="column"><h4>반응형 사이트 가운데 컨텐츠2</h4></article>
+            <article className="column"><h4>반응형 사이트 가운데 컨텐츠3</h4></article>
+          </section>
+          <section id="cont_right">
+            <article className="column"><h4>반응형 사이트 오른쪽 컨텐츠1</h4></article>
+            <article className="column"><h4>반응형 사이트 오른쪽 컨텐츠2</h4></article>
+            <article className="column"><h4>반응형 사이트 오른쪽 컨텐츠3</h4></article>
+          </section>
+        </div>
       </section>
-      <footer>
-        <h2>반응형 사이트 푸터</h2>
+      {/* 푸터 */}
+      <footer id="footer">
+        <div className="container">
+          <h2>반응형 사이트 푸터</h2>
+        </div>
       </footer>
     </div>
   );
