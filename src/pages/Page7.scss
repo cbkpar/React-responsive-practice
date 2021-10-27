@@ -6,6 +6,7 @@
   a {
     color: #222;
     text-decoration: none;
+    transition: color 0.3s ease;
   }
 
   a:hover {
@@ -37,6 +38,111 @@
 
       a:hover {
         color: #ccc;
+      }
+    }
+
+    .header_title {
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 30px;
+        color : #fff;
+        background: #d17f6b;
+        display: block;
+        padding: 0px 10px 0px 10px;
+        margin: 10px auto 0px;
+        border-radius: 10px;
+        letter-spacing: 2px;
+        font-weight: 900;
+        transition: box-shadow 0.25s ease-in-out
+      }
+
+      h1:hover {
+        box-shadow: inset -9em 0 0 0 #e09163,
+                    inset 9em 0 0 0 #e09163;
+      }
+
+      a {
+        font-size: 16px;
+        color: #fff;
+        background: #cfb58e;
+        display: block;
+        margin: 0 auto;
+        padding: 5px 60px 5px 60px;
+        margin-top: 0px;
+        border-radius: 10px;
+        letter-spacing: 2px;
+        transition: box-shadow 0.5s ease-in-out
+      }
+
+      a:hover {
+        box-shadow: inset 0 0 0 3px rgba(191, 145, 75, 0.9),
+                    inset 0 0 0 100px rgba(0,0,0,0.1);
+      }
+    }
+    
+    ul {
+      list-style-type: none;
+      margin: 10px auto;
+      padding: 0;
+    }
+
+    .header_icon {
+      text-align: center;
+
+      li {
+        display: inline-block;
+        margin: 0 5px;        
+        
+        a {
+          position: relative;
+          background: #e0a697;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          color: #fff;
+          display: block;
+          font-size: 25px;
+          line-height: 28px
+        }
+        
+        a span {
+          position: absolute;
+          left: 50%;
+          top: -20px;
+          transform:translateX(-50%);
+          font-size: 14px;
+          line-height: 1.6;
+          background:#d19c76;
+          padding: 3px 9px;
+          border-radius: 6px 0;
+          opacity: 0;
+          transition: all 0.3s ease;
+        }
+
+        a span:before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: -5px;
+          border-top: 5px solid #d19c76;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+        }
+
+        a:hover {
+          box-shadow: inset 0 0 0 3px rgba(191, 145, 75, 0.9),
+                      inset 0 0 0 100px rgba(0,0,0,0.2);
+        }
+
+        a:hover span {
+          opacity: 1;
+          top: -33px;
+        }
       }
     }
   }

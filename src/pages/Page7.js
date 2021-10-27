@@ -1,5 +1,7 @@
 import React from 'react'
 import './Page7.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHtml5, faGithub, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function Page7() {
 
@@ -10,10 +12,25 @@ function Page7() {
       <header id="header">
         <div className="container">
           <div className="header">
+            {/* Header Menu */}
             <div className="header_menu">
-              <a href="#">Blog</a>
-              <a href="#">Github</a>
-              <a href="#">Webstandard</a>
+              <a href="https://cbkpar.tistory.com/" target="_blank">Blog</a>
+              <a href="https://github.com/cbkpar" target="_blank">Github</a>
+              <a href="https://cbkpar-mbti.netlify.app/" target="_blank">MBTI</a>
+            </div>
+            {/* Header Title */}
+            <div className="header_title">
+              <h1>Responsive practice</h1>
+              <a href="https://cbkpar.github.io/React-responsive-practice/index.html">Responsive</a>
+            </div>
+            {/* Header icon */}
+            <div className="header_icon">
+              <ul>
+                <li><a href="#"><FontAwesomeIcon icon={faHtml5} /><span>HTML5</span></a></li>
+                <li><a href="#"><FontAwesomeIcon icon={faGithub} /><span>Github</span></a></li>
+                <li><a href="#"><FontAwesomeIcon icon={faFacebook} /><span>Facebook</span></a></li>
+                <li><a href="#"><FontAwesomeIcon icon={faInstagram} /><span>Instagram</span></a></li>
+              </ul>
             </div>
           </div>
         </div>
