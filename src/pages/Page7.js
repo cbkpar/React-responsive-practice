@@ -2,6 +2,7 @@ import React from 'react'
 import './Page7.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faGithub, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 function Page7() {
 
@@ -35,12 +36,58 @@ function Page7() {
           </div>
         </div>
       </header>
-
-      <nav>
-        <h2>반응형 사이트 메뉴</h2>
+      <nav id="nav">
+        <div className="container">
+          <div className="row">
+            <div className="nav">
+              {/* 반응형 사이트 메뉴 */}
+              <div>
+                <h3>Layout</h3>
+                <o1>
+                  <li><a href="#">Layout 1</a></li>
+                  <li><a href="#">Layout 2</a></li>
+                  <li><a href="#">Layout 3</a></li>
+                  <li><a href="#">Layout 4</a></li>
+                  <li><a href="#">Layout 5</a></li>
+                  <li><a href="#">Layout 6</a></li>
+                </o1>
+              </div>
+              <div>
+                <h3>Homepage</h3>
+                <o1>
+                  <li><a href="#">Homepage 1</a></li>
+                  <li><a href="#">Homepage 2</a></li>
+                  <li><a href="#">Homepage 3</a></li>
+                  <li><a href="#">Homepage 4</a></li>
+                  <li><a href="#">Homepage 5</a></li>
+                  <li><a href="#">Homepage 6</a></li>
+                  <li><a href="#">Homepage 7</a></li>
+                </o1>
+              </div>
+              <div>
+                <h3>Others</h3>
+                <o1>
+                  <li><a href="#">Other 1</a></li>
+                  <li><a href="#">Other 2</a></li>
+                  <li><a href="#">Other 3</a></li>
+                  <li><a href="#">Other 4</a></li>
+                  <li><a href="#">Other 5</a></li>
+                </o1>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
-      <article>
-        <h2>반응형 사이트 서브 타이틀</h2>
+      <article id="title">
+        <div className="container">
+          <div class="title">
+            <h2>반응형 웹페이지를 만들자!</h2>
+            <a href="#" className="btn">
+              <FontAwesomeIcon icon={faAngleDown} />
+              <span>전체 메뉴 보기</span>
+            </a>
+          </div>
+        </div>
       </article>
       <section>
         <h2>반응형 사이트 컨텐츠</h2>
