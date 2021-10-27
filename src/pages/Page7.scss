@@ -1,0 +1,43 @@
+.Page7 {
+
+  margin: 0 auto;
+  background: #cdae74;
+
+  a {
+    color: #222;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #2698cb;
+  }
+
+  #header {
+    width: 100%;
+    background: url(../img/responsive.png) center;
+  }
+
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .header {
+    height: 200px;
+
+    .header_menu {
+      text-align: right;
+      
+      a {
+        display: inline-block;
+        color: #fff;
+        padding: 8px 0 6px 10px;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #ccc;
+      }
+    }
+  }
+}
