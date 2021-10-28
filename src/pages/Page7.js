@@ -93,20 +93,51 @@ function Page7() {
       {/* 본문 */}
       <section id="contents">
         <div className="container">
+          {/* 본문 왼쪽 내용 */}
           <section id="cont_left">
-            <article className="column"><h4>반응형 사이트 왼쪽 컨텐츠1</h4></article>
-            <article className="column"><h4>반응형 사이트 왼쪽 컨텐츠2</h4></article>
-            <article className="column"><h4>반응형 사이트 왼쪽 컨텐츠3</h4></article>
+            <article className="column">
+
+              <h4 className="col_title">Title</h4>
+              <p class="col_desc">Description</p>
+            </article>
+            <article className="column">
+              <h4 className="col_title">Title</h4>
+              <p class="col_desc">Description</p>
+            </article>
+            <article className="column">
+              <h4 className="col_title">Title</h4>
+              <p class="col_desc">Description</p>
+            </article>
           </section>
+          {/* 본문 가운데 내용 */}
           <section id="cont_center">
-            <article className="column"><h4>반응형 사이트 가운데 컨텐츠1</h4></article>
-            <article className="column"><h4>반응형 사이트 가운데 컨텐츠2</h4></article>
-            <article className="column"><h4>반응형 사이트 가운데 컨텐츠3</h4></article>
+            <article className="column">
+              <h4 className="col_title">Title</h4>
+              <p class="col_desc">Description</p>
+            </article>
+            <article className="column">
+              <h4 className="col_title">Title</h4>
+              <p class="col_desc">Description</p>
+            </article>
+            <article className="column">
+              <h4 className="col_title">Title</h4>
+              <p class="col_desc">Description</p>
+            </article>
           </section>
+          {/* 본문 왼쪽 내용 */}
           <section id="cont_right">
-            <article className="column"><h4>반응형 사이트 오른쪽 컨텐츠1</h4></article>
-            <article className="column"><h4>반응형 사이트 오른쪽 컨텐츠2</h4></article>
-            <article className="column"><h4>반응형 사이트 오른쪽 컨텐츠3</h4></article>
+            <article className="column">
+              <h4 className="col_title">Title</h4>
+              <p class="col_desc">Description</p>
+            </article>
+            <article className="column">
+              <h4 className="col_title">Title</h4>
+              <p class="col_desc">Description</p>
+            </article>
+            <article className="column">
+              <h4 className="col_title">Title</h4>
+              <p class="col_desc">Description</p>
+            </article>
           </section>
         </div>
       </section>

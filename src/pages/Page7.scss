@@ -301,6 +301,19 @@
   .column {
     padding: 10px;
     border-bottom: 1px solid #dbdbdb;
+
+    .col_title {
+      font-size: 20px;
+      color: #2f7fa6
+    }
+
+    .col_desc {
+      font-size: 15px;
+      color: #878787;
+      line-height: 20px;
+      margin: 10px;
+      border-bottom: 1px dashed #dbdbdb;
+    }
   }
 
   #footer {
