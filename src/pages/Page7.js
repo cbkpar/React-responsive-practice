@@ -2,7 +2,7 @@ import React from 'react'
 import './Page7.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faGithub, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faAngleRight, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 
 function Page7() {
 
@@ -96,13 +96,45 @@ function Page7() {
           {/* 본문 왼쪽 내용 */}
           <section id="cont_left">
             <article className="column">
-
-              <h4 className="col_title">Title</h4>
-              <p class="col_desc">Description</p>
+              <h4 className="col_title">Menu</h4>
+              <p className="col_desc">Box-shadow</p>
+              <div className="menu">
+                <ul>
+                  <li><a href="#">Menu <FontAwesomeIcon className="icon" icon={faAngleRight} /></a></li>
+                  <li><a href="#">Main <FontAwesomeIcon className="icon" icon={faAngleRight}/></a></li>
+                  <li><a href="#">Layout <FontAwesomeIcon className="icon" icon={faAngleRight}/></a></li>
+                  <li><a href="#">Homepage <FontAwesomeIcon className="icon" icon={faAngleRight}/></a></li>
+                  <li><a href="#">HTML5 <FontAwesomeIcon className="icon" icon={faAngleRight}/></a></li>
+                  <li><a href="#">CSS3 <FontAwesomeIcon className="icon" icon={faAngleRight}/></a></li>
+                </ul>
+              </div>
             </article>
+            {/* 공지사항 */}
             <article className="column">
-              <h4 className="col_title">Title</h4>
-              <p class="col_desc">Description</p>
+              <h4 className="col_title">Notice</h4>
+              <p className="col_desc">공지사항</p>
+              <div className="notice1">
+                <h5>Notice 1</h5>
+                <a href="#" className="more" title="더 보기">More <FontAwesomeIcon className="icon" icon={faPlusCircle} /></a>
+                <ul>
+                  <li><a href="#">2021.10.26 개설 (상세 내용)</a></li>
+                  <li><a href="#">2021.10.27 버튼 추가 (상세 내용)</a></li>
+                  <li><a href="#">2021.10.28 배너 추가 (상세 내용)</a></li>
+                  <li><a href="#">2021.10.28 메뉴 추가 (상세 내용)</a></li>
+                  <li><a href="#">2021.10.28 게시판 추가 (상세 내용)</a></li>
+                </ul>
+              </div>
+              <div className="notice2">
+                <h5>Notice 2</h5>
+                <a href="#" className="more" title="더 보기">More <FontAwesomeIcon className="icon" icon={faPlusCircle} /></a>
+                <ul>
+                  <li><a href="#">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</a></li>
+                  <li><a href="#">남산 위에 저 소나무 철갑을 두른 듯 바람 서리 불변함은 우리 기상일세</a></li>
+                  <li><a href="#">가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편 단심일세</a></li>
+                  <li><a href="#">이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나 나라 사랑하세</a></li>
+                  <a href="#" className="more" title="더 보기"></a>
+                </ul>
+              </div>
             </article>
             <article className="column">
               <h4 className="col_title">Title</h4>
