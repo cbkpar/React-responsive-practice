@@ -101,11 +101,11 @@ function Page7() {
               <div className="menu">
                 <ul>
                   <li><a href="#">Menu <FontAwesomeIcon className="icon" icon={faAngleRight} /></a></li>
-                  <li><a href="#">Main <FontAwesomeIcon className="icon" icon={faAngleRight}/></a></li>
-                  <li><a href="#">Layout <FontAwesomeIcon className="icon" icon={faAngleRight}/></a></li>
-                  <li><a href="#">Homepage <FontAwesomeIcon className="icon" icon={faAngleRight}/></a></li>
-                  <li><a href="#">HTML5 <FontAwesomeIcon className="icon" icon={faAngleRight}/></a></li>
-                  <li><a href="#">CSS3 <FontAwesomeIcon className="icon" icon={faAngleRight}/></a></li>
+                  <li><a href="#">Main <FontAwesomeIcon className="icon" icon={faAngleRight} /></a></li>
+                  <li><a href="#">Layout <FontAwesomeIcon className="icon" icon={faAngleRight} /></a></li>
+                  <li><a href="#">Homepage <FontAwesomeIcon className="icon" icon={faAngleRight} /></a></li>
+                  <li><a href="#">HTML5 <FontAwesomeIcon className="icon" icon={faAngleRight} /></a></li>
+                  <li><a href="#">CSS3 <FontAwesomeIcon className="icon" icon={faAngleRight} /></a></li>
                 </ul>
               </div>
             </article>
@@ -136,9 +136,24 @@ function Page7() {
                 </ul>
               </div>
             </article>
+            {/* 블로그 */}
             <article className="column">
-              <h4 className="col_title">Title</h4>
-              <p class="col_desc">Description</p>
+              <h4 className="col_title">Blog</h4>
+              <p className="col_desc">반응형 이미지</p>
+              <div className="blog1">
+                <h5>Programming</h5>
+                <figure>
+                  <img src={process.env.PUBLIC_URL + '/img/coding_low.jpg'} alt="normal image"></img>
+                  <figcaption>Hello world!</figcaption>
+                </figure>
+              </div>
+              <div className="blog2">
+                <h5>Pet</h5>
+                <figure>
+                  <img src={process.env.PUBLIC_URL + '/img/cat.jpg'} alt="normal image"></img>
+                  <figcaption>Cat Image</figcaption>
+                </figure>
+              </div>
             </article>
           </section>
           {/* 본문 가운데 내용 */}

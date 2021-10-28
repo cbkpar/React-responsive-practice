@@ -285,12 +285,12 @@
   #cont_left {
     float:left;
     width: 250px;
-    min-height: 1300px;
+    min-height: 1500px;
   }
 
   #cont_center {
     overflow: hidden;
-    min-height: 1300px;
+    min-height: 1500px;
     border-left: 1px solid #dbdbdb;
     border-right: 1px solid #dbdbdb;
     margin-right: 250px;
@@ -301,7 +301,7 @@
     right: 0;
     top: 0;
     width: 250px;
-    min-height: 1300px;
+    min-height: 1500px;
   }
   
   .column {
@@ -406,6 +406,23 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+  }
+
+  /* 이미지 */
+  .blog1, .blog2 {
+    border-bottom: 1px solid #dbdbdb;
+
+    h5 {
+      margin: 5px auto;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    figure {
+      margin: 0;
+    }
   }
 
   /* 푸터 */
