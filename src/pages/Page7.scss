@@ -425,22 +425,70 @@
     }
   }
 
+  /* 이미지 슬라이드 */
   .slide {
     width: 95%;
     margin: 0 auto;
     height: auto;
 
     .slidebox {
-      width: 100%;
+      width: 95%;
       max-height: 350px;
 
       img {
         max-width: 100%;
-        width: auto !important;
-        height: auto !important;
+        height: auto;
+        margin: 0 auto;
       }
     }
   }
+
+  /* 라이트 박스 */
+  .lightbox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+    
+    a {
+      position: relative;
+      overflow: hidden;
+      width: 19%;
+      margin: 0.5%;
+    }
+    
+    a em {
+      position: absolute;
+      left: 0;
+      bottom: -30px;
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.77);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      transition: all .3s ease;
+    }
+
+    a:hover em {
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.57);
+    }
+    
+    a:nth-child(1):hover img {filter: blur(2px);}
+    a:nth-child(2):hover img {filter: brightness(50%);}
+    a:nth-child(3):hover img {filter: contrast(10%);}
+    a:nth-child(4):hover img {filter: grayscale(100%);}
+    a:nth-child(5):hover img {filter: hue-rotate(120deg);}
+    a:nth-child(6):hover img {filter: invert(100%);}
+    a:nth-child(7):hover img {filter: opacity(30%);}
+    a:nth-child(8):hover img {filter: saturate(50%);}
+    a:nth-child(9):hover img {filter: sepia(120%);}
+    a:nth-child(10):hover img {filter: sepia(120%) hue-rotate(120deg);}
+  }
+
 
   /* 푸터 */
   #footer {
@@ -456,6 +504,14 @@
 
   @media screen and (max-width: 1439px) {
     width: 100%;
+
+    .lightbox a {
+      width: 24%;
+    }
+
+    .lightbox a:nth-child(5n) {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 960px) {
@@ -484,6 +540,14 @@
       position: static;
       width: 100%;
       border-top: 1px solid #dbdbdb;
+    }
+
+    .lightbox a {
+      width: 32%;
+    }
+
+    .lightbox a:nth-child(5) {
+      display: block;
     }
   }
 
@@ -557,6 +621,14 @@
         }
       }
     }
+
+    .lightbox a {
+      width: 48%;
+    }
+
+    .lightbox a:nth-child(2n+1) {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 480px) {
@@ -564,6 +636,10 @@
       li {
         width: 100%;
       }
+    }
+
+    .lightbox a {
+      width: 98%;
     }
   }
 }

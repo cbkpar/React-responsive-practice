@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Page7.scss';
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,7 +18,7 @@ class Page7 extends Component {
 
   changeImage = (index) => {
     this.setState({
-      imgNo: (index+3) % 3
+      imgNo: (index + 3) % 3
     });
   }
 
@@ -39,16 +39,24 @@ class Page7 extends Component {
 
     const images = [
       {
-        url: process.env.PUBLIC_URL + '/img/coding_low.jpg',
+        url: process.env.PUBLIC_URL + '/img/pet1.jpg',
         no: 0
       },
       {
-        url: process.env.PUBLIC_URL + '/img/cat.jpg',
+        url: process.env.PUBLIC_URL + '/img/pet2.jpg',
         no: 1
       },
       {
-        url: process.env.PUBLIC_URL + '/img/coding_low.jpg',
+        url: process.env.PUBLIC_URL + '/img/pet3.jpg',
         no: 2
+      },
+      {
+        url: process.env.PUBLIC_URL + '/img/pet4.jpg',
+        no: 3
+      },
+      {
+        url: process.env.PUBLIC_URL + '/img/pet5.jpg',
+        no: 4
       },
     ];
 
@@ -188,14 +196,14 @@ class Page7 extends Component {
                 <div className="blog1">
                   <h5>Programming</h5>
                   <figure>
-                    <img src={process.env.PUBLIC_URL + '/img/coding_low.jpg'} alt="normal image"></img>
+                    <img src={process.env.PUBLIC_URL + '/img/coding_low.jpg'} alt="normal image" />
                     <figcaption>Hello world!</figcaption>
                   </figure>
                 </div>
                 <div className="blog2">
                   <h5>Pet</h5>
                   <figure>
-                    <img src={process.env.PUBLIC_URL + '/img/cat.jpg'} alt="normal image"></img>
+                    <img src={process.env.PUBLIC_URL + '/img/cat.jpg'} alt="normal image" />
                     <figcaption>Cat Image</figcaption>
                   </figure>
                 </div>
@@ -205,21 +213,33 @@ class Page7 extends Component {
             <section id="cont_center">
               {/* 이미지 슬라이드 */}
               <article className="column">
-                <h4 className="col_title">Title</h4>
-                <p className="col_desc">Description</p>
+                <h4 className="col_title">Slide</h4>
+                <p className="col_desc">Image Slide</p>
                 <div className="slide">
-                <Slider>
-                  {images?.map((image, no) => (
-                        <div className="slidebox">
-                            <img src={image.url} alt=""/>  
-                        </div>
-                      ))}
-                </Slider>
+                  <Slider>
+                    {images?.map((image, no) => (
+                      <div className="slidebox">
+                        <img src={image.url} alt="" />
+                      </div>
+                    ))}
+                  </Slider>
                 </div>
               </article>
               <article className="column">
-                <h4 className="col_title">Title</h4>
-                <p className="col_desc">Description</p>
+                <h4 className="col_title">Blend-effect</h4>
+                <p className="col_desc">Blend mode</p>
+                <div className="lightbox">
+                  <a href="#"><img src={process.env.PUBLIC_URL + '/img/pet1.jpg'} alt="pet" /><em>blur</em></a>
+                  <a href="#"><img src={process.env.PUBLIC_URL + '/img/pet2.jpg'} alt="pet" /><em>bright</em></a>
+                  <a href="#"><img src={process.env.PUBLIC_URL + '/img/pet3.jpg'} alt="pet" /><em>contrast</em></a>
+                  <a href="#"><img src={process.env.PUBLIC_URL + '/img/pet4.jpg'} alt="pet" /><em>grayscale</em></a>
+                  <a href="#"><img src={process.env.PUBLIC_URL + '/img/pet5.jpg'} alt="pet" /><em>hue-rotate</em></a>
+                  <a href="#"><img src={process.env.PUBLIC_URL + '/img/pet6.jpg'} alt="pet" /><em>invert</em></a>
+                  <a href="#"><img src={process.env.PUBLIC_URL + '/img/pet7.jpg'} alt="pet" /><em>opacity</em></a>
+                  <a href="#"><img src={process.env.PUBLIC_URL + '/img/pet8.jpg'} alt="pet" /><em>saturate</em></a>
+                  <a href="#"><img src={process.env.PUBLIC_URL + '/img/pet9.jpg'} alt="pet" /><em>sepia</em></a>
+                  <a href="#"><img src={process.env.PUBLIC_URL + '/img/pet10.jpg'} alt="pet" /><em>Mix</em></a>
+                </div>
               </article>
               <article className="column">
                 <h4 className="col_title">Title</h4>
