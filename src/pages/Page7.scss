@@ -156,18 +156,19 @@
 
   /* 전체 메뉴 */
   #nav {
+    overflow: hidden;
     background: #ffe2c0
   }
 
   .nav {
     overflow: hidden;
-    padding: 25px 0;
-    display: none;
+    padding: 10px 0;
   }
 
   .nav > div {
     float: left;
-    width: 40%;
+    width: 35%;
+    margin: 0 10px;
 
     ol {
       overflow: hidden;
@@ -502,11 +503,50 @@
     }
   }
 
+  /* 사이드 이미지 */
+  #cont_right {
+    img {
+      width: 100%;
+    }
+
+    figure {
+      margin: 0 auto;
+    }
+  }
+
   /* 푸터 */
   #footer {
     border-top: 1px solid #dbdbdb;
     clear: both;
     margin: 0 auto;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 30px 50px;
+
+    li {
+      position: relative;
+      display: inline;
+      padding: 0 7px 0 10px;
+      white-space: nowrap;
+
+    }
+
+    li:not(:first-of-type):before {
+      content: '';
+      width: 1px;
+      height: 12px;
+      background: #dbdbdb;
+      position: absolute;
+      left: 0;
+      top: 6px;      
+    }
+
+
+    address {
+      padding-top: 15px;
+    }
   }
 
   /* 반응형 */
@@ -560,6 +600,20 @@
 
     .lightbox a:nth-child(5) {
       display: block;
+    }
+
+    #cont_right {
+      display:flex;
+      min-height: 450px;
+
+      .column {
+        border-bottom: 0px;
+      }
+
+      article:nth-child(2) {
+        border-left: 1px solid #dbdbdb;
+        border-right: 1px solid #dbdbdb;
+      }
     }
   }
 
@@ -640,6 +694,18 @@
 
     .lightbox a:nth-child(2n+1) {
       display: none;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    #cont_right {
+      article:nth-child(2) {
+        border-right: 0px;
+      }
+
+      article:nth-child(3) {
+        display: none;
+      }
     }
   }
 

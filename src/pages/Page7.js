@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 import './Page7.scss';
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faGithub, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faAngleDown, faAngleRight, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp, faAngleDown, faAngleRight, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 
 class Page7 extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      imgNo: 0
-    }
+      isopen: false
+    };
   }
 
-  changeImage = (index) => {
+  togglebtn = (e) => {
     this.setState({
-      imgNo: (index + 3) % 3
+      isopen: !this.state.isopen
     });
   }
 
@@ -30,10 +30,6 @@ class Page7 extends Component {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
-      speed: 10,
-      autoplaySpeed: 10,
-      pauseOnHover: false,
       variableWidth: true
     };
 
@@ -89,6 +85,7 @@ class Page7 extends Component {
             </div>
           </div>
         </header>
+        {this.state.isopen?
         <nav id="nav">
           <div className="container">
             <div className="row">
@@ -131,13 +128,14 @@ class Page7 extends Component {
             </div>
           </div>
         </nav>
+        :""}
         {/* 서브타이틀 */}
         <article id="title">
           <div className="container">
             <div class="title">
               <h2>반응형 웹페이지를 만들자!</h2>
-              <a href="#" className="btn">
-                <FontAwesomeIcon icon={faAngleDown} />
+              <a href="#" onClick={this.togglebtn} className="btn">
+                {this.state.isopen?<FontAwesomeIcon icon={faAngleUp} />:<FontAwesomeIcon icon={faAngleDown} />}
                 <span>전체 메뉴 보기</span>
               </a>
             </div>
@@ -246,7 +244,7 @@ class Page7 extends Component {
                 <h4 className="col_title">Video</h4>
                 <p className="col_desc">Music Playing~</p>
                 <div className="video">
-                <iframe src="https://www.youtube.com/embed/yyzYr21MumM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/yyzYr21MumM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </article>
             </section>
@@ -257,17 +255,27 @@ class Page7 extends Component {
                 <p className="col_desc">Mouse Over Effect of CSS</p>
                 <div className="side1">
                   <figure>
-                    <img src ="" alt="side image"></img>
+                    <img src={process.env.PUBLIC_URL + '/img/side1.jpg'} alt="side image"></img>
                   </figure>
                 </div>
               </article>
               <article className="column">
-                <h4 className="col_title">Title</h4>
-                <p className="col_desc">Description</p>
+                <h4 className="col_title">Effect2</h4>
+                <p className="col_desc">Mouse Over Effect of CSS</p>
+                <div className="side2">
+                  <figure>
+                    <img src={process.env.PUBLIC_URL + '/img/side2.jpg'} alt="side image"></img>
+                  </figure>
+                </div>
               </article>
               <article className="column">
-                <h4 className="col_title">Title</h4>
-                <p className="col_desc">Description</p>
+                <h4 className="col_title">Effect3</h4>
+                <p className="col_desc">Mouse Over Effect of CSS</p>
+                <div className="side3">
+                  <figure>
+                    <img src={process.env.PUBLIC_URL + '/img/side3.jpg'} alt="side image"></img>
+                  </figure>
+                </div>
               </article>
             </section>
           </div>
@@ -275,7 +283,24 @@ class Page7 extends Component {
         {/* 푸터 */}
         <footer id="footer">
           <div className="container">
-            <h2>반응형 사이트 푸터</h2>
+            <div className="row">
+              <div className="footer">
+                <ul>
+                  <li><a href="#">사이트 도움말</a></li>
+                  <li><a href="#">사이트 이용약관</a></li>
+                  <li><a href="#">사이트 운영원칙</a></li>
+                  <li><a href="#"><strong>개인정보취급방침</strong></a></li>
+                  <li><a href="#">책임의 한계와 법적고지</a></li>
+                  <li><a href="#">게시중단요청서비스</a></li>
+                  <li><a href="#">고객센터</a></li>
+                </ul>
+                <address>
+                  Copyright ©
+                  <a href="https://github.com/cbkpar"> <strong>cbkpar</strong> </a>
+                  All Rights Reserved.
+                </address>
+              </div>
+            </div>
           </div>
         </footer>
       </div>
