@@ -321,6 +321,10 @@
       margin: 10px;
       border-bottom: 1px dashed #dbdbdb;
     }
+
+  }
+  .column:nth-child(2) {
+    background: #fff;
   }
 
   /* 메뉴 */
@@ -776,6 +780,14 @@
       }
     }
 
+    .nav {
+      display: none;
+    }
+
+    .title h2 {
+      font-size: 30px;
+    }
+
     .title .btn {
       display: none;
     }
@@ -858,6 +870,10 @@
       li {
         width: 100%;
       }
+    }
+
+    .title h2 {
+      font-size: 20px;
     }
 
     .lightbox a {
