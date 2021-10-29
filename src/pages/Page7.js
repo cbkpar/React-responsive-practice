@@ -241,16 +241,25 @@ class Page7 extends Component {
                   <a href="#"><img src={process.env.PUBLIC_URL + '/img/pet10.jpg'} alt="pet" /><em>Mix</em></a>
                 </div>
               </article>
+              {/* 비디오 */}
               <article className="column">
-                <h4 className="col_title">Title</h4>
-                <p className="col_desc">Description</p>
+                <h4 className="col_title">Video</h4>
+                <p className="col_desc">Music Playing~</p>
+                <div className="video">
+                <iframe src="https://www.youtube.com/embed/yyzYr21MumM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
               </article>
             </section>
             {/* 본문 왼쪽 내용 */}
             <section id="cont_right">
               <article className="column">
-                <h4 className="col_title">Title</h4>
-                <p className="col_desc">Description</p>
+                <h4 className="col_title">Effect1</h4>
+                <p className="col_desc">Mouse Over Effect of CSS</p>
+                <div className="side1">
+                  <figure>
+                    <img src ="" alt="side image"></img>
+                  </figure>
+                </div>
               </article>
               <article className="column">
                 <h4 className="col_title">Title</h4>
