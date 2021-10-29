@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faGithub, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faAngleUp, faAngleDown, faAngleRight, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp, faAngleDown, faAngleRight, faPlusCircle, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 class Page7 extends Component {
 
@@ -251,29 +251,44 @@ class Page7 extends Component {
             {/* 본문 왼쪽 내용 */}
             <section id="cont_right">
               <article className="column">
-                <h4 className="col_title">Effect1</h4>
-                <p className="col_desc">Mouse Over Effect of CSS</p>
+                <h4 className="col_title">Effect 1</h4>
+                <p className="col_desc">Rotation with Y axis</p>
                 <div className="side1">
-                  <figure>
+                  <figure className="front">
                     <img src={process.env.PUBLIC_URL + '/img/side1.jpg'} alt="side image"></img>
                   </figure>
+                  <div className="back">
+                  <FontAwesomeIcon className="icon" icon={faHeart} />
+                  </div>
                 </div>
               </article>
               <article className="column">
-                <h4 className="col_title">Effect2</h4>
-                <p className="col_desc">Mouse Over Effect of CSS</p>
+                <h4 className="col_title">Effect 2</h4>
+                <p className="col_desc">Rotation with Y axis</p>
                 <div className="side2">
-                  <figure>
+                  <figure className="front">
                     <img src={process.env.PUBLIC_URL + '/img/side2.jpg'} alt="side image"></img>
+                    <figcaption>
+                      Flower
+                    </figcaption>
+                  </figure>
+                  <figure className="back">
+                    <img src={process.env.PUBLIC_URL + '/img/side4.jpg'} alt="side image"></img>
+                    <figcaption>
+                      Mountain
+                    </figcaption>
                   </figure>
                 </div>
               </article>
               <article className="column">
-                <h4 className="col_title">Effect3</h4>
-                <p className="col_desc">Mouse Over Effect of CSS</p>
+                <h4 className="col_title">Effect 3</h4>
+                <p className="col_desc">Rolling dark ball</p>
                 <div className="side3">
                   <figure>
                     <img src={process.env.PUBLIC_URL + '/img/side3.jpg'} alt="side image"></img>
+                    <figcaption>
+                      Lotus
+                    </figcaption>
                   </figure>
                 </div>
               </article>
