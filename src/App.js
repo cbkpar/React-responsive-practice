@@ -8,19 +8,20 @@ import Page4 from "./pages/Page4";
 import Page5 from "./pages/Page5";
 import Page6 from "./pages/Page6";
 import Page7 from "./pages/Page7";
+import Page8 from "./pages/Page8";
 
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      page: 6
+      page: 7
     }
   }
 
   changeMode = () => {
     this.setState({
-      page: (this.state.page+1)%7
+      page: (this.state.page+1)%8
     });
   }
 
@@ -39,6 +40,7 @@ class App extends Component {
           {this.state.page === 4 ? <Page5></Page5> : ""}
           {this.state.page === 5 ? <Page6></Page6> : ""}
           {this.state.page === 6 ? <Page7></Page7> : ""}
+          {this.state.page === 7 ? <Page8></Page8> : ""}
         </section>
         <footer></footer>
       </div>
