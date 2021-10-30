@@ -434,16 +434,12 @@
   .slide {
     width: 95%;
     margin: 0 auto;
-    height: auto;
 
-    .slidebox {
-      width: 95%;
-      max-height: 350px;
+    .slider {
+      width: 100%;
 
       img {
-        max-width: 100%;
-        height: auto;
-        margin: 0 auto;
+        width: 100%;
       }
     }
   }

@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import './Page8.scss';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 class Page8 extends Component {
 
@@ -15,7 +22,10 @@ class Page8 extends Component {
                   <em><img src={process.env.PUBLIC_URL + '/img/movie-logo.png'} alt="logo" /></em>
                   <strong><img src={process.env.PUBLIC_URL + '/img/movie-logo-sub.png'} alt="logo_sub"></img></strong>
                 </a></h1>
-                <div className="nav">
+                <nav id="mNav">
+                  <a href="#" className="ham"><span></span></a>
+                </nav>
+                <nav className="nav">
                   <ul>
                     <li><a href="#">영화</a></li>
                     <li><a href="#">큐레이션</a></li>
@@ -25,7 +35,7 @@ class Page8 extends Component {
                     <li><a href="#">이벤트</a></li>
                     <li><a href="#">로그인</a></li>
                   </ul>
-                </div>
+                </nav>
               </div>
             </div>
           </div>
@@ -56,9 +66,20 @@ class Page8 extends Component {
               </div>
             </div>
           </div>
-          <div className="slider">
-            <img src={process.env.PUBLIC_URL + '/img/movie_slider1.jpg'} alt="slider1"></img>
-          </div>
+          <Swiper
+            className="slider"
+              spaceBetween={0}
+              slidesPerView={1}
+              loop={true}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 5000 }}>
+              <SwiperSlide><img src={process.env.PUBLIC_URL + '/img/movie_slider1.jpg'} alt="slider1" /></SwiperSlide>
+              <SwiperSlide><img src={process.env.PUBLIC_URL + '/img/movie_slider2.jpg'} alt="slider2" /></SwiperSlide>
+              <SwiperSlide><img src={process.env.PUBLIC_URL + '/img/movie_slider3.jpg'} alt="slider3" /></SwiperSlide>
+              <SwiperSlide><img src={process.env.PUBLIC_URL + '/img/movie_slider4.jpg'} alt="slider4" /></SwiperSlide>
+            </Swiper>
+
         </section>
       </div>
     );

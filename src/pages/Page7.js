@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './Page7.scss';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faGithub, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faAngleUp, faAngleDown, faAngleRight, faPlusCircle, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 class Page7 extends Component {
 
@@ -23,15 +27,6 @@ class Page7 extends Component {
   }
 
   render() {
-
-    var settings = {
-      className: "slider",
-      dots: true,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      variableWidth: true
-    };
 
     const images = [
       {
@@ -85,57 +80,57 @@ class Page7 extends Component {
             </div>
           </div>
         </header>
-        {this.state.isopen?
-        <nav id="nav">
-          <div className="container">
-            <div className="row">
-              <div className="nav">
-                {/* 반응형 사이트 메뉴 */}
-                <div>
-                  <h3>Layout</h3>
-                  <o1>
-                    <li><a href="#">Layout 1</a></li>
-                    <li><a href="#">Layout 2</a></li>
-                    <li><a href="#">Layout 3</a></li>
-                    <li><a href="#">Layout 4</a></li>
-                    <li><a href="#">Layout 5</a></li>
-                    <li><a href="#">Layout 6</a></li>
-                  </o1>
-                </div>
-                <div>
-                  <h3>Homepage</h3>
-                  <o1>
-                    <li><a href="#">Homepage 1</a></li>
-                    <li><a href="#">Homepage 2</a></li>
-                    <li><a href="#">Homepage 3</a></li>
-                    <li><a href="#">Homepage 4</a></li>
-                    <li><a href="#">Homepage 5</a></li>
-                    <li><a href="#">Homepage 6</a></li>
-                    <li><a href="#">Homepage 7</a></li>
-                  </o1>
-                </div>
-                <div>
-                  <h3>Others</h3>
-                  <o1>
-                    <li><a href="#">Other 1</a></li>
-                    <li><a href="#">Other 2</a></li>
-                    <li><a href="#">Other 3</a></li>
-                    <li><a href="#">Other 4</a></li>
-                    <li><a href="#">Other 5</a></li>
-                  </o1>
+        {this.state.isopen ?
+          <nav id="nav">
+            <div className="container">
+              <div className="row">
+                <div className="nav">
+                  {/* 반응형 사이트 메뉴 */}
+                  <div>
+                    <h3>Layout</h3>
+                    <o1>
+                      <li><a href="#">Layout 1</a></li>
+                      <li><a href="#">Layout 2</a></li>
+                      <li><a href="#">Layout 3</a></li>
+                      <li><a href="#">Layout 4</a></li>
+                      <li><a href="#">Layout 5</a></li>
+                      <li><a href="#">Layout 6</a></li>
+                    </o1>
+                  </div>
+                  <div>
+                    <h3>Homepage</h3>
+                    <o1>
+                      <li><a href="#">Homepage 1</a></li>
+                      <li><a href="#">Homepage 2</a></li>
+                      <li><a href="#">Homepage 3</a></li>
+                      <li><a href="#">Homepage 4</a></li>
+                      <li><a href="#">Homepage 5</a></li>
+                      <li><a href="#">Homepage 6</a></li>
+                      <li><a href="#">Homepage 7</a></li>
+                    </o1>
+                  </div>
+                  <div>
+                    <h3>Others</h3>
+                    <o1>
+                      <li><a href="#">Other 1</a></li>
+                      <li><a href="#">Other 2</a></li>
+                      <li><a href="#">Other 3</a></li>
+                      <li><a href="#">Other 4</a></li>
+                      <li><a href="#">Other 5</a></li>
+                    </o1>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </nav>
-        :""}
+          </nav>
+          : ""}
         {/* 서브타이틀 */}
         <article id="title">
           <div className="container">
             <div class="title">
               <h2>반응형 웹페이지를 만들자!</h2>
               <a href="#" onClick={this.togglebtn} className="btn">
-                {this.state.isopen?<FontAwesomeIcon icon={faAngleUp} />:<FontAwesomeIcon icon={faAngleDown} />}
+                {this.state.isopen ? <FontAwesomeIcon icon={faAngleUp} /> : <FontAwesomeIcon icon={faAngleDown} />}
                 <span>전체 메뉴 보기</span>
               </a>
             </div>
@@ -214,13 +209,17 @@ class Page7 extends Component {
                 <h4 className="col_title">Slide</h4>
                 <p className="col_desc">Image Slide</p>
                 <div className="slide">
-                  <Slider>
+                  <Swiper
+                    className="slider"
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    loop={true}
+                    pagination={{ clickable: true }}
+                    autoplay={{ delay: 4000 }}>
                     {images?.map((image, no) => (
-                      <div className="slidebox">
-                        <img src={image.url} alt="" />
-                      </div>
+                      <SwiperSlide><img src={image.url} alt="" /></SwiperSlide>
                     ))}
-                  </Slider>
+                  </Swiper>
                 </div>
               </article>
               <article className="column">
@@ -258,7 +257,7 @@ class Page7 extends Component {
                     <img src={process.env.PUBLIC_URL + '/img/side1.jpg'} alt="side image"></img>
                   </figure>
                   <div className="back">
-                  <FontAwesomeIcon className="icon" icon={faHeart} />
+                    <FontAwesomeIcon className="icon" icon={faHeart} />
                   </div>
                 </div>
               </article>
