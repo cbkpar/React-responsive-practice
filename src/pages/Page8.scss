@@ -89,7 +89,6 @@
       display: block;
       width: 27px;
       height: 20px;
-      // background: rgba(7,222,3,0.5);
       padding: 5px;
 
       span {
@@ -163,7 +162,7 @@
     }
 
     ul {
-      margin: 10px 10px 10px 10px;
+      margin: 10px 10px;
     }
 
     li {
@@ -226,7 +225,11 @@
 
       li {
         text-align: center;
-        margin-right: 20px;
+        margin-right: 18px;
+      }
+
+      li:last-child {
+        margin-right: 0;
       }
 
       li.white {
@@ -258,10 +261,33 @@
   }
 
   .slider {
+    position: relative;
     width: 100%;
 
     img {
       width:100%;
+    }
+
+    .container {
+      h2 {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+        padding: 1px 5px;
+        font-size: 30px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.4);
+      }
+  
+      p {
+        position: absolute;
+        top: 91px;
+        left: 30px;
+        padding: 0 5px;
+        font-size: 20px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.4);
+      }
     }
   }
 
@@ -276,11 +302,37 @@
     .header .nav li {
       width: 94px;
     }
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .bm_left {
+      display: none;
+    }
+
+    .bm_right ul:first-child {
+      display: none;
+    }
+
+    .slider{
+      .container {
+        h2 {
+          position: absolute;
+          top: 40px;
+          left: 30px;
+          font-size: 24px;
+        }
+    
+        p {
+          position: absolute;
+          top: 82px;
+          left: 30px;
+          font-size: 15px;
+        }
+      }
+    }
   }  
   
   @media screen and (max-width: 960px) {
-
-
     .nav {
       display: none;
     }
@@ -308,7 +360,21 @@
   }  
 
   @media screen and (max-width: 600px) {
+    .banner_menu .bm_right li.white a {
+      font-size: 14px;
+      padding: 3px 5px 5px 5px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+      border-color: #fff;
+    }
 
+    .banner_menu .bm_right li.purple a {
+      font-size: 14px;
+      padding: 3px 5px 5px 5px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+      border-color: #fff;
+    }
   }  
 
   @media screen and (max-width: 480px) {

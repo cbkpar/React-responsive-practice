@@ -15,24 +15,52 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 7
+      page: 7,
+      mode: '95%'
     }
   }
 
   changeMode = () => {
     this.setState({
-      page: (this.state.page+1)%8
+      page: (this.state.page+7)%8
     });
   }
 
   render() {
+    const pagename = [
+      {
+        name:"Layout 1"
+      },
+      {
+        name:"Layout 2"
+      },
+      {
+        name:"Layout 3"
+      },
+      {
+        name:"Layout 4"
+      },
+      {
+        name:"Layout 5"
+      },
+      {
+        name:"Layout 6"
+      },
+      {
+        name:"Responsive Web"
+      },
+      {
+        name:"MegaBox"
+      },
+    ];
+
     return (
       <div id="container">
-        <header><h1>Responsive Practice</h1>
+        <header><h1>Responsive Practice({pagename[this.state.page].name})</h1>
           <button onClick={this.changeMode}>바꾸기</button></header>
         <nav></nav>
         <aside></aside>
-        <section>
+        <section style={{width:this.state.mode}}>
           {this.state.page === 0 ? <Page1></Page1> : ""}
           {this.state.page === 1 ? <Page2></Page2> : ""}
           {this.state.page === 2 ? <Page3></Page3> : ""}

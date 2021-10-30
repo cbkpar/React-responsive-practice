@@ -432,8 +432,10 @@
 
   /* 이미지 슬라이드 */
   .slide {
-    width: 95%;
+    width: 100%;
+    max-width: 550px;
     margin: 0 auto;
+    overflow: hidden;
 
     .slider {
       width: 100%;

@@ -5,6 +5,8 @@ import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -47,7 +49,7 @@ class Page8 extends Component {
               <div className="row">
                 <div className="bm_left">
                   <ul>
-                    <li className="total"><a href="#">전체메뉴</a></li>
+                    <li className="total"><a href="#"><FontAwesomeIcon icon={faBars} />전체메뉴</a></li>
                     <li className="line"><a href="#">필름 소사이어티</a></li>
                     <li><a href="#">클래식 소사이어티</a></li>
                   </ul>
@@ -68,18 +70,36 @@ class Page8 extends Component {
           </div>
           <Swiper
             className="slider"
-              spaceBetween={0}
-              slidesPerView={1}
-              loop={true}
-              navigation
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 5000 }}>
-              <SwiperSlide><img src={process.env.PUBLIC_URL + '/img/movie_slider1.jpg'} alt="slider1" /></SwiperSlide>
-              <SwiperSlide><img src={process.env.PUBLIC_URL + '/img/movie_slider2.jpg'} alt="slider2" /></SwiperSlide>
-              <SwiperSlide><img src={process.env.PUBLIC_URL + '/img/movie_slider3.jpg'} alt="slider3" /></SwiperSlide>
-              <SwiperSlide><img src={process.env.PUBLIC_URL + '/img/movie_slider4.jpg'} alt="slider4" /></SwiperSlide>
-            </Swiper>
-
+            spaceBetween={0}
+            slidesPerView={1}
+            loop={true}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 4500 }}>
+            <SwiperSlide>
+              <div className="container">
+                <h2>베스와 베라</h2>
+                <p>드라마 / 공포</p>
+              </div>
+              <img src={process.env.PUBLIC_URL + '/img/movie_slider1.jpg'} alt="slider1" /></SwiperSlide>
+            <SwiperSlide>
+              <div className="container">
+                <h2>워킹 데드</h2>
+                <p>드라마 / 공포</p>
+              </div>
+              <img src={process.env.PUBLIC_URL + '/img/movie_slider2.jpg'} alt="slider2" /></SwiperSlide>
+            <SwiperSlide>
+              <div className="container">
+                <h2>어벤져스</h2>
+                <p>액션 / 모험</p>
+              </div>
+              <img src={process.env.PUBLIC_URL + '/img/movie_slider3.jpg'} alt="slider3" /></SwiperSlide>
+            <SwiperSlide>
+              <div className="container">
+                <h2>왕좌의 게임</h2>
+                <p>드라마</p>
+              </div>
+              <img src={process.env.PUBLIC_URL + '/img/movie_slider4.jpg'} alt="slider4" /></SwiperSlide>
+          </Swiper>
         </section>
       </div>
     );
