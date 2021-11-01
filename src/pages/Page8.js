@@ -101,6 +101,99 @@ class Page8 extends Component {
               <img src={process.env.PUBLIC_URL + '/img/movie_slider4.jpg'} alt="slider4" /></SwiperSlide>
           </Swiper>
         </section>
+        {/* 영화상영표 */}
+        <section id="movie">
+          <div className="container">
+            <div className="movie">
+              <div className="movie_title">
+                <ul>
+                  <li className="active"><a href="#">박스오피스</a></li>
+                  <li><a href="#">최신개봉작</a></li>
+                  <li><a href="#">상영예정작</a></li>
+                  <li><a href="#">큐레이션</a></li>
+                </ul>
+              </div>
+              <div className="movie_chart">
+                <div className="chart_cont1">
+                  <div className="poster">
+                    <figure>
+                      <img src={process.env.PUBLIC_URL + '/img/poster1.jpg'} srcset={process.env.PUBLIC_URL + '/img/poster1@2.jpg 2x'} alt="poster1"></img>
+                    </figure>
+                    <div className="rank"><strong>1</strong></div>
+                    <div className="mx">
+                      <span className="icon m"></span>
+                      <span className="icon b"></span>
+                    </div>
+                    <div className="infor">
+                      <h3><span className="icon all"></span><strong>침묵</strong></h3>
+                      <div className="infor_btn">
+                        <a href="#">상세보기</a>
+                        <a href="#">예매하기</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="poster">
+                    <figure>
+                      <img src={process.env.PUBLIC_URL + '/img/poster2.jpg'} srcset={process.env.PUBLIC_URL + '/img/poster2@2.jpg 2x'} alt="poster2"></img>
+                    </figure>
+                    <div className="rank"><strong>2</strong></div>
+                    <div className="mx">
+                      <span className="icon m"></span>
+                      <span className="icon b"></span>
+                    </div>
+                    <div className="infor">
+                      <h3><span className="icon a12"></span><strong>신세계</strong></h3>
+                      <div className="infor_btn">
+                        <a href="#">상세보기</a>
+                        <a href="#">예매하기</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="poster">
+                    <figure>
+                      <img src={process.env.PUBLIC_URL + '/img/poster3.jpg'} srcset={process.env.PUBLIC_URL + '/img/poster3@2.jpg 2x'} alt="poster3"></img>
+                    </figure>
+                    <div className="rank"><strong>3</strong></div>
+                    <div className="mx">
+                      <span className="icon m"></span>
+                      <span className="icon b"></span>
+                    </div>
+                    <div className="infor">
+                      <h3><span className="icon a15"></span><strong>마스터</strong></h3>
+                      <div className="infor_btn">
+                        <a href="#">상세보기</a>
+                        <a href="#">예매하기</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="poster">
+                    <figure>
+                      <img src={process.env.PUBLIC_URL + '/img/poster4.jpg'} srcset={process.env.PUBLIC_URL + '/img/poster4@2.jpg 2x'} alt="poster4"></img>
+                    </figure>
+                    <div className="rank"><strong>4</strong></div>
+                    <div className="mx">
+                      <span className="icon m"></span>
+                      <span className="icon b"></span>
+                    </div>
+                    <div className="infor">
+                      <h3><span className="icon a19"></span><strong>마약왕</strong></h3>
+                      <div className="infor_btn">
+                        <a href="#">상세보기</a>
+                        <a href="#">예매하기</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="chart_cont2">
+                </div>
+                <div className="chart_cont3">
+                </div>
+                <div className="chart_cont4">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     );
   }

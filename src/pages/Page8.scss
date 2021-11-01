@@ -30,6 +30,11 @@
     clear: both;
   }
 
+  /* 아이콘 */
+  .icon {
+    background-image: url(../img/movie-icon.png);
+  }
+
   /* 헤더 */
   #header {
     width: 100%;
@@ -291,6 +296,158 @@
     }
   }
 
+  /* 영화상영표 */
+  .movie {
+    padding: 100px 0;
+
+    .movie_title {
+      margin-bottom: 60px;
+
+      ul {
+        overflow: hidden;
+        width: 848px;
+        margin: 0 auto;
+      }
+      
+      li {
+        float: left;
+        width: 210px;
+        text-align: center;
+        border: 1px solid #c4c4c4;
+        margin-right: -1px;
+      }
+
+      li a {
+        display: block;
+        padding: 15px 0;
+        font-size: 18px;
+        color: #666;
+        font-weight: 700;
+      }
+
+      li.active a {
+        background-color: #666;
+        color: #fff;
+      }
+    }
+
+    .movie_chart {
+
+      .chart_cont1 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+
+      > div > div {
+        display: inline-block;
+        width: 292px;
+        height: 592px;
+      }
+
+      .poster {
+        position: relative;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      .rank {
+        position: absolute;
+        top: 17px;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #38116a;
+        text-align: center;
+
+        strong {
+          color: #fff;
+        }
+      }
+
+      .mx {
+        position: absolute;
+        top: 17px;
+        right: 17px;
+        
+        span {
+          width: 103px;
+          height: 25px;
+          display: block;
+        }
+
+        .m {
+          background-position: 0 -75px;
+        }
+
+        .b {
+          background-position: 0 -100px;
+        }
+      }
+
+      .infor {
+        background: #fff;
+        padding: 17px;
+        border: 1px solid #d9d9d9;
+
+        h3 {
+          color: #333;
+          font-size: 30px;
+          font-weight: 700;
+          margin-bottom: 20px;
+
+          span {
+            display: inline-block;
+            width: 29px;
+            height: 29px;
+            margin-top: 9px;
+          }
+
+          span.all {
+            background-position: -87px -125px;
+          }
+
+          span.a12 {
+            background-position: -58px -125px;
+          }
+
+          span.a15 {
+            background-position: 0 -125px;
+          }
+
+          span.a19 {
+            background-position: -29px -125px;
+          }
+        }
+
+        .infor_btn {
+          display: flex;
+          justify-content: space-between;
+        }
+        .infor_btn a {
+          display: block;
+          width: 45%;
+          background: #f2f2f2;
+          font-size: 18px;
+          padding: 15px 3px;
+          margin: 0 3px;
+          text-align: center;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+
+
   /* 반응형 */
   @media screen and (min-width: 1440px) {
     width: 1280px;
@@ -353,6 +510,9 @@
         }
       }
     }
+    .movie .movie_chart .infor .infor_btn a {
+      font-size: 14px;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -374,6 +534,20 @@
       color: #fff;
       background: rgba(0, 0, 0, 0.6);
       border-color: #fff;
+    }
+
+    .slider{
+      .container {
+        h2 {
+          position: absolute;
+          top: 20px;
+          font-size: 20px;
+        }
+    
+        p {
+          display: none;
+        }
+      }
     }
   }  
 
