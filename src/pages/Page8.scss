@@ -298,7 +298,7 @@
 
   /* 영화상영표 */
   .movie {
-    padding: 100px 0;
+    padding: 40px 0;
 
     .movie_title {
       margin-bottom: 60px;
@@ -333,7 +333,7 @@
 
     .movie_chart {
 
-      .chart_cont1 {
+      .chart_cont {
         display: flex;
         justify-content: space-between;
       }
@@ -408,23 +408,23 @@
             display: inline-block;
             width: 29px;
             height: 29px;
-            margin-top: 9px;
+            margin: 9px 9px 0 0;
+          }
+
+          span.a12 {
+            background-position: 0 -125px;
+          }
+
+          span.a15 {
+            background-position: -29px -125px;
+          }
+          
+          span.a19 {
+            background-position: -58px -125px;
           }
 
           span.all {
             background-position: -87px -125px;
-          }
-
-          span.a12 {
-            background-position: -58px -125px;
-          }
-
-          span.a15 {
-            background-position: 0 -125px;
-          }
-
-          span.a19 {
-            background-position: -29px -125px;
           }
         }
 

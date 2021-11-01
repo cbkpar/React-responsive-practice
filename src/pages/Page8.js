@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './Page8.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
@@ -10,9 +10,97 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
+
+
+
 class Page8 extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      mvtabidx: 0
+    };
+  }
+
+  changemvtab = (e, idx) => {
+    e.preventDefault();
+    this.setState({
+      mvtabidx: idx
+    });
+  }
+
   render() {
+    const movieArr = [
+      {
+        name: '박스오피스',
+        content: [0, 1, 2, 3],
+      },
+      {
+        name: '최신개봉작',
+        content: [2, 3, 4, 5],
+      },
+      {
+        name: '상영예정작',
+        content: [6, 7, 8, 9],
+      },
+      {
+        name: '큐레이션',
+        content: [0, 1, 3, 5],
+      },
+    ];
+
+    const movieList = [
+      {
+        name: '침묵',
+        src: process.env.PUBLIC_URL + '/img/poster1.jpg',
+        age: 'a15',
+      },
+      {
+        name: '신세계',
+        src: process.env.PUBLIC_URL + '/img/poster2.jpg',
+        age: 'a19',
+      },
+      {
+        name: '마스터',
+        src: process.env.PUBLIC_URL + '/img/poster3.jpg',
+        age: 'a15',
+      },
+      {
+        name: '마약왕',
+        src: process.env.PUBLIC_URL + '/img/poster4.jpg',
+        age: 'a19',
+      },
+      {
+        name: 'her',
+        src: process.env.PUBLIC_URL + '/img/poster5.jpg',
+        age: 'a15',
+      },
+      {
+        name: '괴물',
+        src: process.env.PUBLIC_URL + '/img/poster6.jpg',
+        age: 'a12',
+      },
+      {
+        name: '꼭두각시',
+        src: process.env.PUBLIC_URL + '/img/poster7.jpg',
+        age: 'a19',
+      },
+      {
+        name: 'GETOUT',
+        src: process.env.PUBLIC_URL + '/img/poster8.jpg',
+        age: 'a15',
+      },
+      {
+        name: '문라이트',
+        src: process.env.PUBLIC_URL + '/img/poster9.jpg',
+        age: 'a15',
+      },
+      {
+        name: '보헤미안랩소디',
+        src: process.env.PUBLIC_URL + '/img/poster10.jpg',
+        age: 'all',
+      },
+    ]
     return (
       <div className="Page8">
         {/* 헤더 */}
@@ -107,88 +195,43 @@ class Page8 extends Component {
             <div className="movie">
               <div className="movie_title">
                 <ul>
-                  <li className="active"><a href="#">박스오피스</a></li>
-                  <li><a href="#">최신개봉작</a></li>
-                  <li><a href="#">상영예정작</a></li>
-                  <li><a href="#">큐레이션</a></li>
+                  {movieArr.map((ele, idx) => {
+                    return (
+                      <li
+                        key={idx}
+                        className={this.state.mvtabidx === idx ? "active" : ""}
+                        onClick={(e) => this.changemvtab(e, idx)}
+                      ><a href="#">{ele.name}</a></li>
+                    )
+                  })}
                 </ul>
               </div>
               <div className="movie_chart">
-                <div className="chart_cont1">
-                  <div className="poster">
-                    <figure>
-                      <img src={process.env.PUBLIC_URL + '/img/poster1.jpg'} srcset={process.env.PUBLIC_URL + '/img/poster1@2.jpg 2x'} alt="poster1"></img>
-                    </figure>
-                    <div className="rank"><strong>1</strong></div>
-                    <div className="mx">
-                      <span className="icon m"></span>
-                      <span className="icon b"></span>
-                    </div>
-                    <div className="infor">
-                      <h3><span className="icon all"></span><strong>침묵</strong></h3>
-                      <div className="infor_btn">
-                        <a href="#">상세보기</a>
-                        <a href="#">예매하기</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="poster">
-                    <figure>
-                      <img src={process.env.PUBLIC_URL + '/img/poster2.jpg'} srcset={process.env.PUBLIC_URL + '/img/poster2@2.jpg 2x'} alt="poster2"></img>
-                    </figure>
-                    <div className="rank"><strong>2</strong></div>
-                    <div className="mx">
-                      <span className="icon m"></span>
-                      <span className="icon b"></span>
-                    </div>
-                    <div className="infor">
-                      <h3><span className="icon a12"></span><strong>신세계</strong></h3>
-                      <div className="infor_btn">
-                        <a href="#">상세보기</a>
-                        <a href="#">예매하기</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="poster">
-                    <figure>
-                      <img src={process.env.PUBLIC_URL + '/img/poster3.jpg'} srcset={process.env.PUBLIC_URL + '/img/poster3@2.jpg 2x'} alt="poster3"></img>
-                    </figure>
-                    <div className="rank"><strong>3</strong></div>
-                    <div className="mx">
-                      <span className="icon m"></span>
-                      <span className="icon b"></span>
-                    </div>
-                    <div className="infor">
-                      <h3><span className="icon a15"></span><strong>마스터</strong></h3>
-                      <div className="infor_btn">
-                        <a href="#">상세보기</a>
-                        <a href="#">예매하기</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="poster">
-                    <figure>
-                      <img src={process.env.PUBLIC_URL + '/img/poster4.jpg'} srcset={process.env.PUBLIC_URL + '/img/poster4@2.jpg 2x'} alt="poster4"></img>
-                    </figure>
-                    <div className="rank"><strong>4</strong></div>
-                    <div className="mx">
-                      <span className="icon m"></span>
-                      <span className="icon b"></span>
-                    </div>
-                    <div className="infor">
-                      <h3><span className="icon a19"></span><strong>마약왕</strong></h3>
-                      <div className="infor_btn">
-                        <a href="#">상세보기</a>
-                        <a href="#">예매하기</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="chart_cont2">
-                </div>
-                <div className="chart_cont3">
-                </div>
-                <div className="chart_cont4">
+                <div className="chart_cont">
+                  {movieArr.map((ele, idx) => {
+                    return (
+                      this.state.mvtabidx === idx ?
+                        movieArr[idx].content.map((s, sidx) => {
+                          return (
+                            <div className="poster">
+                              <figure><img src={movieList[s].src} alt="poster" /></figure>
+                              <div className="rank"><strong>{sidx + 1}</strong></div>
+                              <div className="mx">
+                                <span className="icon m"></span>
+                                <span className="icon b"></span>
+                              </div>
+                              <div className="infor">
+                                <h3><span className={"icon " + movieList[s].age}></span><strong>{movieList[s].name}</strong></h3>
+                                <div className="infor_btn">
+                                  <a href="#">상세보기</a>
+                                  <a href="#">예매하기</a>
+                                </div>
+                              </div>
+                            </div>
+                          )
+                        }) : ""
+                    )
+                  })}
                 </div>
               </div>
             </div>
