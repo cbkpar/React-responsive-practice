@@ -454,6 +454,44 @@
       }
     }
   }
+  
+  /* 이벤트 */
+  .event {
+    overflow: hidden;
+    margin: 10px;
+
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 10px 0 10px 0;
+    }
+    
+    .event_left {
+      float: left;
+      width: 66%;
+      margin-right: 2%;
+
+      .event_box1 {
+        float: left;
+        width: 50%;
+      }
+
+      .event_box2 {
+        float: left;
+        width: 50%;
+      }
+    }
+    
+    .event_right {
+      float: left;
+      width: 32%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
 
   /* 반응형 */
   @media screen and (min-width: 1440px) {
@@ -591,6 +629,14 @@
         background: none;
         color: #666;
       }
+    }
+    
+    .event .event_left {
+      width: 100%;
+    }
+
+    .event .event_right {
+      display: none;
     }
   }  
 

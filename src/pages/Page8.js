@@ -258,6 +258,28 @@ class Page8 extends Component {
             </div>
           </div>
         </section>
+        {/* 이벤트 */}
+        <section id="event">
+          <div className="container">
+            <div className="event">
+              <h2>이벤트</h2>
+              <div className="event_left">  
+                <div className="event_slider">
+                  <img src={process.env.PUBLIC_URL + '/img/movie_event1.jpg'} alt="시티 패키지" />
+                </div>
+                <div className="event_box1">
+                  <img src={process.env.PUBLIC_URL + '/img/movie_event2.jpg'} alt="남포항점 2019년 시즌 할인권" />
+                </div>
+                <div className="event_box2">
+                  <img src={process.env.PUBLIC_URL + '/img/movie_event3.jpg'} alt="설 선물 이수점 전용 관람권 런칭" />
+                </div>
+              </div>
+              <div className="event_right">
+                <img src={process.env.PUBLIC_URL + '/img/movie_event4.jpg'} alt="사표 대신 영화표" />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     );
   }
