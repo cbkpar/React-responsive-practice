@@ -10,9 +10,6 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-
-
-
 class Page8 extends Component {
 
   constructor(props) {
@@ -33,19 +30,19 @@ class Page8 extends Component {
     const movieArr = [
       {
         name: '박스오피스',
-        content: [0, 1, 2, 3],
+        content: [0, 1, 2, 3, 4, 5],
       },
       {
         name: '최신개봉작',
-        content: [2, 3, 4, 5],
+        content: [2, 3, 4, 5, 7, 8],
       },
       {
         name: '상영예정작',
-        content: [6, 7, 8, 9],
+        content: [6, 7, 8, 9, 1, 2],
       },
       {
         name: '큐레이션',
-        content: [0, 1, 3, 5],
+        content: [0, 1, 3, 5, 6 , 4],
       },
     ];
 
@@ -208,11 +205,32 @@ class Page8 extends Component {
               </div>
               <div className="movie_chart">
                 <div className="chart_cont">
+                  <Swiper
+                    spaceBetween={20}
+                    slidesPerView={1.5}
+                    loop={true}
+                    
+                    breakpoints={{
+                      "600": {
+                        "slidesPerView": 2,
+                        "spaceBetween": 20
+                      },
+                      "960": {
+                        "slidesPerView": 3,
+                        "spaceBetween": 15
+                      },
+                      "1024": {
+                        "slidesPerView": 4,
+                        "spaceBetween": 10
+                      }
+                    }}
+                  >
                   {movieArr.map((ele, idx) => {
                     return (
-                      this.state.mvtabidx === idx ?
+                      this.state.mvtabidx === idx &&
                         movieArr[idx].content.map((s, sidx) => {
                           return (
+                            <SwiperSlide>
                             <div className="poster">
                               <figure><img src={movieList[s].src} alt="poster" /></figure>
                               <div className="rank"><strong>{sidx + 1}</strong></div>
@@ -228,10 +246,12 @@ class Page8 extends Component {
                                 </div>
                               </div>
                             </div>
+                            </SwiperSlide>
                           )
-                        }) : ""
+                        })
                     )
                   })}
+                  </Swiper>
                 </div>
               </div>
             </div>
