@@ -493,6 +493,81 @@
     }
   }
 
+  /* 오프닝 */
+  #opening {
+    margin: 10px 0;
+  }
+
+  .opening {
+    background: url(../img/movie_bg.jpg) no-repeat center top;
+    background-size: cover;
+    margin: 10px;
+    text-align: center;
+    color: #bb9b01;
+    padding: 100px 0;
+    overflow: hidden;
+
+    h2 .grand {
+      background-position: 0 -175px;
+      display: inline-block;
+      width: 330px;
+      height: 50px;
+    }
+
+    .date {
+      background-position: 0 -225px;
+      display: inline-block;
+      width: 260px;
+      height: 45px;
+    }
+    
+    .desc {
+      font-size: 30px;
+      font-weight: 300;
+      padding: 20px;
+      margin: 0 10px 50px 10px;
+      background: url(../img/movie_bar.png) no-repeat bottom center;
+      background-size: 100%;
+    }
+    
+    .open_box {
+      display: flex;
+      justify-content: space-evenly;
+
+      > div {
+        position: relative;
+        margin: 0 auto;
+        width: 25%;
+        padding: 10px 0px;
+        border: 2px solid #3e4b44;
+        background: rgba(0, 0, 0, 0.7);
+        box-sizing: border-box;
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      > div h3 {
+        position: absolute;
+        left: 50%;
+        top: -35px;
+        transform: translateX(-50%);
+        width: 60%;
+        color: #fff;
+        border: 1px solid #6e3abb;
+        border-radius: 10px;
+        background: rgb(90, 57, 139);
+        font-size: 19px;
+      }
+
+      > div p {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+  }
+
   /* 반응형 */
   @media screen and (min-width: 1440px) {
     width: 1280px;
@@ -569,6 +644,19 @@
     .movie .movie_chart .infor .infor_btn a {
       font-size: 14px;
     }
+
+    .opening {
+      padding: 50px 0;
+    }
+
+    .opening .open_box {
+      display: none;
+    }
+    
+    .opening .desc {
+      font-size: 23px;
+      background: none;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -638,6 +726,15 @@
     .event .event_right {
       display: none;
     }
+
+    .opening {
+      padding: 30px 0;
+    }
+
+    .opening .desc {
+      font-size: 18px;
+      margin: 0 auto;
+    }
   }  
 
   @media screen and (max-width: 600px) {
@@ -698,6 +795,29 @@
       .infor_btn a:last-child {
         display: none;
       }
+    }
+
+    .opening {
+      padding: 10px 0;
+    }
+
+    .opening h2 {
+      margin: 0 auto;
+    }
+
+    .opening h2 .grand {
+      background-size: 300px;
+      background-position: 0 -105px;
+      width: 197px;
+      height: 24px;
+    }
+
+    .opening .date {
+      display: none;
+    }
+
+    .opening .desc {
+      padding: 0 5px;
     }
   }  
 

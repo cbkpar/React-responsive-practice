@@ -42,7 +42,7 @@ class Page8 extends Component {
       },
       {
         name: '큐레이션',
-        content: [0, 1, 3, 5, 6 , 4],
+        content: [0, 1, 3, 5, 6, 4],
       },
     ];
 
@@ -226,32 +226,32 @@ class Page8 extends Component {
                       }
                     }}
                   >
-                  {movieArr.map((ele, idx) => {
-                    return (
-                      this.state.mvtabidx === idx &&
+                    {movieArr.map((ele, idx) => {
+                      return (
+                        this.state.mvtabidx === idx &&
                         movieArr[idx].content.map((s, sidx) => {
                           return (
                             <SwiperSlide>
-                            <div className="poster">
-                              <figure><img src={movieList[s].src} alt="poster" /></figure>
-                              <div className="rank"><strong>{sidx + 1}</strong></div>
-                              <div className="mx">
-                                <span className="icon m"></span>
-                                <span className="icon b"></span>
-                              </div>
-                              <div className="infor">
-                                <h3><span className={"icon " + movieList[s].age}></span><strong>{movieList[s].name}</strong></h3>
-                                <div className="infor_btn">
-                                  <a href="#">상세보기</a>
-                                  <a href="#">예매하기</a>
+                              <div className="poster">
+                                <figure><img src={movieList[s].src} alt="poster" /></figure>
+                                <div className="rank"><strong>{sidx + 1}</strong></div>
+                                <div className="mx">
+                                  <span className="icon m"></span>
+                                  <span className="icon b"></span>
+                                </div>
+                                <div className="infor">
+                                  <h3><span className={"icon " + movieList[s].age}></span><strong>{movieList[s].name}</strong></h3>
+                                  <div className="infor_btn">
+                                    <a href="#">상세보기</a>
+                                    <a href="#">예매하기</a>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
                             </SwiperSlide>
                           )
                         })
-                    )
-                  })}
+                      )
+                    })}
                   </Swiper>
                 </div>
               </div>
@@ -263,7 +263,7 @@ class Page8 extends Component {
           <div className="container">
             <div className="event">
               <h2>이벤트</h2>
-              <div className="event_left">  
+              <div className="event_left">
                 <div className="event_slider">
                   <img src={process.env.PUBLIC_URL + '/img/movie_event1.jpg'} alt="시티 패키지" />
                 </div>
@@ -276,6 +276,30 @@ class Page8 extends Component {
               </div>
               <div className="event_right">
                 <img src={process.env.PUBLIC_URL + '/img/movie_event4.jpg'} alt="사표 대신 영화표" />
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* 오프닝 */}
+        <section id="opening">
+          <div className="container">
+            <div className="opening">
+              <h2><span className="grand icon"></span></h2>
+              <strong class="date icon"></strong>
+              <p className="desc">LIFE THEATER로 새롭게 시작하는 메가박스를 만나보세요!</p>
+              <div class="open_box">
+                <div>
+                  <h3>리뉴얼 오픈</h3>
+                  <p><em>경기도</em><strong>안양</strong>11월 8일</p>
+                </div>
+                <div>
+                  <h3>리뉴얼 오픈</h3>
+                  <p><em>경기도</em><strong>평택</strong>11월 8일</p>
+                </div>
+                <div>
+                  <h3>리뉴얼 오픈</h3>
+                  <p><em>서울</em><strong>판교</strong>11월 9일</p>
+                </div>
               </div>
             </div>
           </div>
