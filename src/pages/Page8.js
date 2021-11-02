@@ -190,6 +190,7 @@ class Page8 extends Component {
         <section id="movie">
           <div className="container">
             <div className="movie">
+              <span className="movie_title_top">영화 예매</span>
               <div className="movie_title">
                 <ul>
                   {movieArr.map((ele, idx) => {
@@ -206,14 +207,14 @@ class Page8 extends Component {
               <div className="movie_chart">
                 <div className="chart_cont">
                   <Swiper
-                    spaceBetween={20}
+                    spaceBetween={5}
                     slidesPerView={1.5}
                     loop={true}
-                    
+                    autoplay={{ delay: 6000 }}
                     breakpoints={{
                       "600": {
                         "slidesPerView": 2,
-                        "spaceBetween": 20
+                        "spaceBetween": 10
                       },
                       "960": {
                         "slidesPerView": 3,
