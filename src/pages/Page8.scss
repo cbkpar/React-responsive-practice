@@ -565,7 +565,170 @@
         flex-direction: column;
       }
     }
+  }
 
+  /* 새로운 영화 */
+  #newmovie {
+    margin: 10px;
+  }
+
+  .newmovie {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    
+    h2 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .new_left {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background: url("../img/movie_new.jpg") bottom center;
+      background-size: cover;
+    }
+
+    .new_left .play {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      font-size: 50px;
+      color: rgba(255,255,255,0.5);
+    }
+    
+    .new_right {
+      width: 500px;
+      height: 400px;
+      margin-left: 10px;
+      background: #ddd;
+
+      .info {
+        margin: 10px;
+
+        .name {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        .score {
+          margin: 10px 0;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        
+        .score span {
+          display: inline-block;
+          width: 19px;
+          height: 19px;
+        }
+        
+        .score .num1 {
+          background-position: 605px 0;
+        }
+
+        .score .num2 {
+          background-position: 605px 0;
+        }
+
+        .score .num3 {
+          background-position: 605px 0;
+        }
+
+        .score .num4 {
+          background-position: 586px 0;
+        }
+
+        .score .num5 {
+          background-position: 625px 0;
+          margin-right: 10px;
+        }
+
+        .desc {
+          white-space: normal;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          overflow: hidden;
+        }
+      }
+
+      .ticket {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 10px;
+        font-weight: bold;
+
+        .date {
+          width: 45%;
+          height: 30px;
+          text-align: center;
+          background: rgb(44, 44, 44);
+          border : 1px solid #000;
+          color: white;
+          margin: 5px;
+        }
+        
+        .time {
+          width: 45%;
+          height: 34px;
+          text-align: center;
+          background: rgb(44, 44, 44);
+          border : 1px solid #000;
+          color: white;
+          margin: 5px;
+        }
+        
+        .address {
+          width: 100%;
+          height: 30px;
+          background: rgb(44, 44, 44);
+          border : 1px solid #000;
+          color: rgb(187, 187, 187);
+          margin: 5px;
+        }
+        
+        .btn {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          text-align: center;
+        }
+
+        .white {
+          display: inline-flex;
+          justify-content: center;
+          width: 45%;
+          height: 30px;
+          background: #ffffff;
+          border : 1px solid #a167af;
+          color: #a167af;
+          margin: 5px;
+        }
+
+        .purple {
+          display: inline-flex;
+          justify-content: center;
+          width: 45%;
+          height: 30px;
+          background: #a167af;
+          border : 1px solid #ffffff;
+          color: #ffffff;
+          margin: 5px;
+        }
+      }
+    }
   }
 
   /* 반응형 */
@@ -657,6 +820,11 @@
       font-size: 23px;
       background: none;
     }
+
+
+    .newmovie .new_right .info .name {
+      font-size: 20px;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -734,6 +902,37 @@
     .opening .desc {
       font-size: 18px;
       margin: 0 auto;
+    }
+
+    .newmovie {
+      display: block;
+
+      .new_left {
+        width: 100%;
+      }
+
+      .new_right {
+        width: 100%;
+      }
+    }
+
+    .newmovie .new_right .info .name {
+      white-space: nowrap;
+      font-size: 15px;
+    }
+
+    .newmovie .new_right .info .desc {
+      -webkit-line-clamp: 2;
+    }
+
+    .newmovie .new_right .ticket {
+      .date {
+        width: 100%;
+      }
+
+      .time {
+        width: 100%;
+      }
     }
   }  
 

@@ -6,8 +6,7 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
+import { faBars, faPlay } from "@fortawesome/free-solid-svg-icons";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 class Page8 extends Component {
@@ -15,7 +14,8 @@ class Page8 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mvtabidx: 0
+      mvtabidx: 0,
+      timeidx: 0,
     };
   }
 
@@ -23,6 +23,13 @@ class Page8 extends Component {
     e.preventDefault();
     this.setState({
       mvtabidx: idx
+    });
+  }
+
+  changetime = (e, idx) => {
+    e.preventDefault();
+    this.setState({
+      timeidx: idx
     });
   }
 
@@ -98,6 +105,9 @@ class Page8 extends Component {
         age: 'all',
       },
     ]
+
+    const TimeArr = ['오전 0:00', '오전 1:00', '오전 2:00', '오전 8:00', '오후 3:00', '오후 6:00']
+
     return (
       <div className="Page8">
         {/* 헤더 */}
@@ -299,6 +309,59 @@ class Page8 extends Component {
                 <div>
                   <h3>리뉴얼 오픈</h3>
                   <p><em>서울</em><strong>판교</strong>11월 9일</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* 새로운 영화 */}
+        <section id="newmovie">
+          <div className="container">
+            <h2>새로운 영화</h2>
+            <div className="newmovie">
+              <div className="new_left">
+                <div className="play">
+                  <FontAwesomeIcon icon={faPlay} />
+                </div>
+              </div>
+              <div className="new_right">
+                <div className="info">
+                  <div className="name">
+                    로그 원: 스타워즈 스토리
+                  </div>
+                  <div className="debutdate">
+                    2016년 10월 28일 개봉
+                  </div>
+                  <div className="score">
+                    <span className="icon num1"></span>
+                    <span className="icon num2"></span>
+                    <span className="icon num3"></span>
+                    <span className="icon num4"></span>
+                    <span className="icon num5"></span>
+                    7.5/10
+                  </div>
+                  <div className="genre">
+                    액션 미국, 오스트레일리아
+                  </div>
+                  <div className="type">
+                    142분 12세 이상 관람가
+                  </div>
+                  <div className="desc">
+                    단숨에 행성 하나를 파괴할 위력을 지닌 데스 스타가 완성되기 전에 설계도를 훔쳐내야 하는 이번 작전의 성공 확률은 고작 2.4%. 생사도 모르는 아버지에 얽힌 비밀을 밝히려는 진을 ...비롯해 유능한 정보 요원 ‘카시안’(디에고 루나), 두 눈이 멀었지만 탁월한 무술 실력을 지닌 ‘치루트’(견자단), 전투 베테랑 ‘베이즈’, 파일럿 ‘보디’, 시니컬한 드로이드 ‘K-2SO’까지 합류, 거대한 전쟁을 끝낼 ‘로그 원’이 이끄는 가장 비밀스런 작전이 시작되는데…
+                  </div>
+                </div>
+                <div className="ticket">
+                  <input type="text" id="udate" name="udate" value="2021년 11월 2일" className="date"></input>
+                  <select className="time" onChange={(e, idx) => this.changetime(e, idx)} value={this.state.timeidx}>
+                    {TimeArr.map((time, idx) => (
+                      <option value={idx} key={idx}>{TimeArr[idx]}</option>
+                    ))}
+                  </select>
+                  <input className="address" type="text" id="utext" name="utext" placeholder="주소 또는 도로명을 입력해주세요." />
+                  <div className="btn">
+                    <a href="#" className="white">좌석확인</a>
+                    <a href="#" className="purple">예매하기</a>
+                  </div>
                 </div>
               </div>
             </div>
