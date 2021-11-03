@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/React-responsive-practice/static/css/main.5145fec4.chunk.css",
-    "main.js": "/React-responsive-practice/static/js/main.5a14bef3.chunk.js",
-    "main.js.map": "/React-responsive-practice/static/js/main.5a14bef3.chunk.js.map",
-    "runtime-main.js": "/React-responsive-practice/static/js/runtime-main.ad5cfe99.js",
-    "runtime-main.js.map": "/React-responsive-practice/static/js/runtime-main.ad5cfe99.js.map",
+    "main.css": "/React-responsive-practice/static/css/main.1d915d05.chunk.css",
+    "main.js": "/React-responsive-practice/static/js/main.38aaffdb.chunk.js",
+    "main.js.map": "/React-responsive-practice/static/js/main.38aaffdb.chunk.js.map",
+    "runtime-main.js": "/React-responsive-practice/static/js/runtime-main.0d440570.js",
+    "runtime-main.js.map": "/React-responsive-practice/static/js/runtime-main.0d440570.js.map",
     "static/css/2.b4e4841b.chunk.css": "/React-responsive-practice/static/css/2.b4e4841b.chunk.css",
-    "static/js/2.a0b46dfd.chunk.js": "/React-responsive-practice/static/js/2.a0b46dfd.chunk.js",
-    "static/js/2.a0b46dfd.chunk.js.map": "/React-responsive-practice/static/js/2.a0b46dfd.chunk.js.map",
-    "static/js/3.94a00dc2.chunk.js": "/React-responsive-practice/static/js/3.94a00dc2.chunk.js",
-    "static/js/3.94a00dc2.chunk.js.map": "/React-responsive-practice/static/js/3.94a00dc2.chunk.js.map",
+    "static/js/2.d7e21e6b.chunk.js": "/React-responsive-practice/static/js/2.d7e21e6b.chunk.js",
+    "static/js/2.d7e21e6b.chunk.js.map": "/React-responsive-practice/static/js/2.d7e21e6b.chunk.js.map",
+    "static/js/3.9668cbaa.chunk.js": "/React-responsive-practice/static/js/3.9668cbaa.chunk.js",
+    "static/js/3.9668cbaa.chunk.js.map": "/React-responsive-practice/static/js/3.9668cbaa.chunk.js.map",
     "index.html": "/React-responsive-practice/index.html",
     "static/css/2.b4e4841b.chunk.css.map": "/React-responsive-practice/static/css/2.b4e4841b.chunk.css.map",
-    "static/css/main.5145fec4.chunk.css.map": "/React-responsive-practice/static/css/main.5145fec4.chunk.css.map",
-    "static/js/2.a0b46dfd.chunk.js.LICENSE.txt": "/React-responsive-practice/static/js/2.a0b46dfd.chunk.js.LICENSE.txt",
+    "static/css/main.1d915d05.chunk.css.map": "/React-responsive-practice/static/css/main.1d915d05.chunk.css.map",
+    "static/js/2.d7e21e6b.chunk.js.LICENSE.txt": "/React-responsive-practice/static/js/2.d7e21e6b.chunk.js.LICENSE.txt",
     "static/media/Page8.scss": "/React-responsive-practice/static/media/movie_new.7b8f495f.jpg",
     "static/media/Page7.scss": "/React-responsive-practice/static/media/responsive.cba73953.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ad5cfe99.js",
+    "static/js/runtime-main.0d440570.js",
     "static/css/2.b4e4841b.chunk.css",
-    "static/js/2.a0b46dfd.chunk.js",
-    "static/css/main.5145fec4.chunk.css",
-    "static/js/main.5a14bef3.chunk.js"
+    "static/js/2.d7e21e6b.chunk.js",
+    "static/css/main.1d915d05.chunk.css",
+    "static/js/main.38aaffdb.chunk.js"
   ]
 }
