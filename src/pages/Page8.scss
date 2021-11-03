@@ -29,6 +29,9 @@
   .clearfix:after {
     clear: both;
   }
+  
+  /* ir 효과 */
+  .ir_pm {display:block; overflow:hidden; font-size:0; line-height:0; text-indent:-9999px;}
 
   /* 아이콘 */
   .icon {
@@ -827,6 +830,7 @@
       position: relative;
       border: 1px solid #dbdbdb;
       margin: 5px;
+      overflow: hidden;
     }
 
     img {
@@ -908,7 +912,92 @@
     li:nth-child(3) {
       border-right: 1px solid #dbdbdb;
     }
+  }
 
+  /* 푸터 */
+  #footer {
+    position: relative;
+    background: #211f1f;
+  }
+
+  .footer_sns {
+    position: absolute;
+    right: 17px;
+    top: 33px;
+    z-index: 1;
+
+    li {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      margin-left: 4px;
+    }
+
+    li.s1 {background-position: 0 -375px;}
+    li.s2 {background-position: -36px -375px;}
+    li.s3 {background-position: -72px -375px;}
+    li.s4 {background-position: -108px -375px;}
+    li.s5 {background-position: -144px -375px;}
+    li.s1:hover {background-position: 0 -411px;}
+    li.s2:hover {background-position: -36px -411px;}
+    li.s3:hover {background-position: -72px -411px;}
+    li.s4:hover {background-position: -108px -411px;}
+    li.s5:hover {background-position: -144px -411px;}
+
+    .tel {
+      text-align: right;
+      padding-top: 5px;
+    }
+
+    .tel a {
+      color: #8f8f8f;
+      font-size: 21px;
+    }
+
+    .tel a em {
+      color: #fff;
+    }
+
+  }
+
+
+  .footer_info {
+    padding: 30px 0;
+    margin: 0 auto;
+    width: 80%;
+    h2 img {
+      width: 150px;
+    }
+
+    ul {
+      padding: 15px 0;
+    }
+
+    li {
+      position: relative;
+      display: inline;
+      padding-right: 16px;
+      white-space: nowrap;
+    }
+
+    li:not(:first-of-type):after {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 7px;
+      width: 1px;
+      height: 13px;
+      background-color: #8f8f8f;
+    }
+
+    li a {
+      color: #8f8f8f;
+    }
+
+    address {
+      color: #8f8f8f;
+      padding-bottom: 15px;
+    }
   }
 
   /* 반응형 */
@@ -967,8 +1056,8 @@
         height: 175px;
 
         li {
-          width: 25%;
           height: 100%;
+          width: 25%;
         }
 
         li:nth-child(1) {
@@ -1036,10 +1125,26 @@
       background: none;
     }
 
-
     .newmovie .new_right .info .name {
       font-size: 20px;
     }
+
+    .footer_sns {
+      position: static;
+      text-align: center;
+      padding-bottom: 15px;
+      background-color: #352c2c;
+
+      .tel {
+        display: none;
+      }
+    }
+
+    .footer_info {
+      width: 100%;
+      text-align: center;
+    }
+
   }
 
   @media screen and (max-width: 768px) {

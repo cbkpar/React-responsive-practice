@@ -118,40 +118,40 @@ class Page8 extends Component {
 
     const noticeArr = [
       {
-        classidx : 0,
-        class : '전체',
-        date : '2019.05.28',
-        article : '[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
+        classidx: 0,
+        class: '전체',
+        date: '2019.05.28',
+        article: '[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
       },
       {
-        classidx : 0,
-        class : '전체',
-        date : '2019.06.22',
-        article : '[무대인사] 로그 원 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
+        classidx: 0,
+        class: '전체',
+        date: '2019.06.22',
+        article: '[무대인사] 로그 원 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
       },
       {
-        classidx : 1,
-        class : '서울',
-        date : '2019.02.03',
-        article : '[CGV판교점] 캐러멜 팝콘 1 + 1 행사',
+        classidx: 1,
+        class: '서울',
+        date: '2019.02.03',
+        article: '[CGV판교점] 캐러멜 팝콘 1 + 1 행사',
       },
       {
-        classidx : 0,
-        class : '전체',
-        date : '2020.04.11',
-        article : '[사전예약] 어바웃타임 재상영 티켓 사전 예약',
+        classidx: 0,
+        class: '전체',
+        date: '2020.04.11',
+        article: '[사전예약] 어바웃타임 재상영 티켓 사전 예약',
       },
       {
-        classidx : 1,
-        class : '평택',
-        date : '2019.02.04',
-        article : '[CGV평택점] 학생 영화 반값 할인 행사~',
+        classidx: 1,
+        class: '평택',
+        date: '2019.02.04',
+        article: '[CGV평택점] 학생 영화 반값 할인 행사~',
       },
       {
-        classidx : 0,
-        class : '전체',
-        date : '2020.06.23',
-        article : '[전체] 메가박스 10주년 기념 행사 안내',
+        classidx: 0,
+        class: '전체',
+        date: '2020.06.23',
+        article: '[전체] 메가박스 10주년 기념 행사 안내',
       },
     ]
 
@@ -434,14 +434,14 @@ class Page8 extends Component {
                     </li>
                   </ul>
                   <ul className="content">
-                  {noticeArr.map((notice, idx) => (
-                    notice.classidx===this.state.noticeidx &&
-                    <li>
-                      <strong>{notice.class}</strong>
-                      <em>{notice.date}</em>
-                      <span>{notice.article}</span>
-                    </li>
-                  ))}
+                    {noticeArr.map((notice, idx) => (
+                      notice.classidx === this.state.noticeidx &&
+                      <li>
+                        <strong>{notice.class}</strong>
+                        <em>{notice.date}</em>
+                        <span>{notice.article}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </article>
@@ -493,6 +493,42 @@ class Page8 extends Component {
             </div>
           </div>
         </section>
+        <footer id="footer">
+          <div id="footer_sns">
+            <div className="footer_sns">
+              <ul>
+                <li className="icon s1"><span className="ir_pm">트위터</span></li>
+                <li className="icon s2"><span className="ir_pm">페이스북</span></li>
+                <li className="icon s3"><span className="ir_pm">인스타그램</span></li>
+                <li className="icon s4"><span className="ir_pm">구글 플레이</span></li>
+                <li className="icon s5"><span className="ir_pm">아이폰 앱스토어</span></li>
+              </ul>
+              <div className="tel">
+                <a href="#">ARS <em>1544-0070</em></a>
+              </div>
+            </div>
+          </div>
+          <div id="footer_info">
+            <div className="container">
+              <div className="footer_info">
+                <h2><img src={process.env.PUBLIC_URL + '/img/movie-logo-sub.png'} alt="" /></h2>
+                <ul>
+                  <li><a href="#">회사소개</a></li>
+                  <li><a href="#">채용정보</a></li>
+                  <li><a href="#">제휴/광고/부대사업 문의</a></li>
+                  <li><a href="#">이용약관</a></li>
+                  <li><a href="#">개인정보처리방침</a></li>
+                  <li><a href="#">고객센터</a></li>
+                  <li><a href="#">윤리경영</a></li>
+                </ul>
+                <address>
+                  <p>서울특별시 강남구 도산대로 156, 2층 메가박스중앙(주) (논현동, 중앙엠앤비사옥)<br /><span class="bar2">대표자명 김진선</span> 개인정보보호 책임자 경영지원실 실장 박영진<br /><span class="bar2">사업자등록번호 211-86-59478</span> 통신판매업신고번호 제 833호</p>
+                  <p>Copyright 2014 by MegaboxJoongAng Inc. All right reserved</p>
+                </address>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }
