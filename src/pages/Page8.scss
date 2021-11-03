@@ -452,6 +452,7 @@
           display: flex;
           justify-content: space-between;
         }
+
         .infor_btn a {
           display: block;
           width: 45%;
@@ -461,6 +462,10 @@
           margin: 0 3px;
           text-align: center;
           font-weight: 700;
+        }
+
+        .infor_btn a:hover {
+          background: #c9c9c9;
         }
       }
     }
@@ -602,6 +607,11 @@
       background-size: cover;
     }
 
+    .new_left:hover .play {
+        background: rgba(255, 255, 255, 0.4);
+        color: rgba(255,255,255,0.4);
+    }
+
     .new_left .play {
       position: absolute;
       display: flex;
@@ -616,6 +626,11 @@
       background: rgba(255, 255, 255, 0.2);
       font-size: 50px;
       color: rgba(255,255,255,0.5);
+    }
+    
+    .new_left .play:hover {
+      background: rgba(255, 255, 255, 0.5);
+      color: rgba(255,255,255,0.7);
     }
     
     .new_right {
