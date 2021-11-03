@@ -140,6 +140,10 @@
           padding: 14px 0px;
           font-size: 17px;
         }
+
+        a:hover {
+          background: rgb(202, 184, 184);
+        }
       }
     }
   }
@@ -335,6 +339,10 @@
         font-weight: 700;
       }
 
+      li a:hover {
+        background-color: #ececec;
+      }
+      
       li.active a {
         background-color: #666;
         color: #fff;
@@ -734,7 +742,9 @@
   /* 헬프 */
   .help {
     overflow: hidden;
+    margin-bottom: 30px;
     display: flex;
+    justify-content: space-between;
 
     h3 {
       font-size: 30px;
@@ -769,7 +779,6 @@
       border: 1px solid #dbdbdb;
       font-size: 15px;
       color: #666;
-      width: 80px;
       padding: 10px 20px;
       background-color: #f5f5f5;
       margin-right: -1px;
@@ -809,6 +818,99 @@
     }
   }
 
+  /* 할인 카드 */
+  .card {
+    padding: 17px;
+    
+    li {
+      height: 100px;
+      position: relative;
+      border: 1px solid #dbdbdb;
+      margin: 5px;
+    }
+
+    img {
+      position: absolute;
+      top: 17px;
+      left: 17px;
+    }
+    
+    strong {
+      display: block;
+      padding-left: 130px;
+      padding-top: 17px;
+    }
+    
+    em {
+      display: block;
+      padding-left: 130px;
+      font-size: 13px;
+    }
+  }
+
+  /* 고객 센터 */
+  .service {
+    ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 50%;
+      box-sizing: border-box;
+      font-size: 20px;
+      font-weight: 700;
+      padding-bottom: 20px;
+    }
+
+    li a {
+      text-align: center;
+    }
+
+    span {
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 5px auto;
+    }
+
+    .sv1 {
+      background-position: 0px -267px;
+    }
+
+    .sv2 {
+      background-position: -100px -267px;
+    }
+
+    .sv3 {
+      background-position: -201px -267px;
+    }
+
+    .sv4 {
+      background-position: -300px -267px;
+    }
+
+    li:nth-child(1) {
+      border-right: 1px solid #dbdbdb;
+      border-bottom: 1px solid #dbdbdb;
+    }
+
+    li:nth-child(2) {
+      border-bottom: 1px solid #dbdbdb;
+    }
+
+    li:nth-child(3) {
+      border-right: 1px solid #dbdbdb;
+    }
+
+  }
+
   /* 반응형 */
   @media screen and (min-width: 1440px) {
     width: 1280px;
@@ -845,6 +947,41 @@
           top: 82px;
           left: 30px;
           font-size: 15px;
+        }
+      }
+    }
+
+    .help {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      article {
+        width: 48%;
+      }
+
+      .help_box3 {
+        width: 96%;
+      }
+
+      .service{
+        height: 175px;
+
+        li {
+          width: 25%;
+          height: 100%;
+        }
+
+        li:nth-child(1) {
+          border-right: none;
+          border-bottom: none;
+        }
+    
+        li:nth-child(2) {
+          border-bottom: none;
+        }
+    
+        li:nth-child(3) {
+          border-right: none;
         }
       }
     }
@@ -1010,6 +1147,58 @@
 
       .time {
         width: 100%;
+      }
+    }
+
+    .help {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      > article {
+        width: 95%;
+        margin: 10px;
+        background-color: #fff;
+
+        > div {
+          border: none;
+        }
+      }
+      
+      h3 {
+        font-size: 20px;
+        margin: 10px 10px 0 15px;
+      }
+
+      .help_box3 h3 {
+        display: none;
+      }
+
+      .service{
+        height: 250px;
+
+        span {
+          width: 100px;
+          height: 100px;
+        }
+
+        li {
+          width: 50%;
+          height: 50%;
+          font-size: 15px;
+        }
+        
+        li:nth-child(1) {
+          border-right: 1px solid #dbdbdb;
+          border-bottom: 1px solid #dbdbdb;
+        }
+    
+        li:nth-child(2) {
+          border-bottom: 1px solid #dbdbdb;
+        }
+    
+        li:nth-child(3) {
+          border-right: 1px solid #dbdbdb;
+        }
       }
     }
   }  

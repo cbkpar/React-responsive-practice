@@ -446,8 +446,50 @@ class Page8 extends Component {
                 </div>
               </article>
               <article className="help_box2">
+                <h3>메가박스 할인카드</h3>
+                <div className="card">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <span>
+                          <img src={process.env.PUBLIC_URL + '/img/movie_card1.jpg'} alt="card1" />
+                          <strong>T멤버십 일반</strong>
+                          <em>영화 2,000원 현장 즉시 할인(1일 5매)</em>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span>
+                          <img src={process.env.PUBLIC_URL + '/img/movie_card2.jpg'} alt="card2" />
+                          <strong>T멤버십 VIP</strong>
+                          <em>영화 5,000원 현장 즉시 할인(1일 5매)</em>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span>
+                          <img src={process.env.PUBLIC_URL + '/img/movie_card3.jpg'} alt="card3" />
+                          <strong>T멤버십 VVIP</strong>
+                          <em>영화 6,000원 현장 즉시 할인(1일 10매)</em>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </article>
-              <article className="help_box3">b</article>
+              <article className="help_box3">
+                <h3>고객센터</h3>
+                <div className="service">
+                  <ul>
+                    <li><a href="#"><span className="icon sv1"></span>1:1 문의</a></li>
+                    <li><a href="#"><span className="icon sv2"></span>단체관람</a></li>
+                    <li><a href="#"><span className="icon sv3"></span>자주묻는 질문</a></li>
+                    <li><a href="#"><span className="icon sv4"></span>분실물 문의</a></li>
+                  </ul>
+                </div>
+              </article>
             </div>
           </div>
         </section>
