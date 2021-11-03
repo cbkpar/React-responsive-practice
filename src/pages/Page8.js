@@ -7,6 +7,7 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPlay } from "@fortawesome/free-solid-svg-icons";
+import ReactPlayer from 'react-player'
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 class Page8 extends Component {
@@ -17,6 +18,7 @@ class Page8 extends Component {
       mvtabidx: 0,
       timeidx: 0,
       noticeidx: 0,
+      isOpen: false,
     };
   }
 
@@ -38,6 +40,13 @@ class Page8 extends Component {
     e.preventDefault();
     this.setState({
       noticeidx: idx
+    });
+  }
+
+  openModal = (e) => {
+    e.preventDefault();
+    this.setState({
+      isOpen : true
     });
   }
 
@@ -367,9 +376,11 @@ class Page8 extends Component {
             <h2>새로운 영화</h2>
             <div className="newmovie">
               <div className="new_left">
-                <div className="play">
-                  <FontAwesomeIcon icon={faPlay} />
-                </div>
+                <a href="#" onClick={(e) => this.openModal(e)}>
+                  <div className="play">
+                    <FontAwesomeIcon icon={faPlay} />
+                  </div>
+                </a>
               </div>
               <div className="new_right">
                 <div className="info">
@@ -529,6 +540,32 @@ class Page8 extends Component {
             </div>
           </div>
         </footer>
+        {/* 트레일러 */}
+        {this.state.isOpen===true &&
+        <aside id="blackout" className="overlay">
+          <div id="traileModal" className="modal">
+            <div id="trailer">
+              <ReactPlayer url='https://youtu.be/F1239ZePXfM'
+              className ="react-player"
+              width="120%"
+              height="115%"
+                config={{
+                  youtube:{
+                    playerVars: {
+                      theme: "dark",
+                      color: "white",
+                      autoplay: 1,
+                      rel: 0,
+                      iv_load_policy: 3,
+                      cc_load_policy: 1,
+                    }
+                  }
+                }}
+              />
+            </div>
+          </div>
+          <button className="modal_close" onClick={() => this.setState({isOpen: false})}>닫기</button>
+        </aside>}
       </div>
     );
   }
