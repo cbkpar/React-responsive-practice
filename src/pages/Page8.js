@@ -16,6 +16,7 @@ class Page8 extends Component {
     this.state = {
       mvtabidx: 0,
       timeidx: 0,
+      noticeidx: 0,
     };
   }
 
@@ -30,6 +31,13 @@ class Page8 extends Component {
     e.preventDefault();
     this.setState({
       timeidx: idx
+    });
+  }
+
+  changenotice = (e, idx) => {
+    e.preventDefault();
+    this.setState({
+      noticeidx: idx
     });
   }
 
@@ -107,6 +115,45 @@ class Page8 extends Component {
     ]
 
     const TimeArr = ['오전 0:00', '오전 1:00', '오전 2:00', '오전 8:00', '오후 3:00', '오후 6:00']
+
+    const noticeArr = [
+      {
+        classidx : 0,
+        class : '전체',
+        date : '2019.05.28',
+        article : '[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
+      },
+      {
+        classidx : 0,
+        class : '전체',
+        date : '2019.06.22',
+        article : '[무대인사] 로그 원 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
+      },
+      {
+        classidx : 1,
+        class : '서울',
+        date : '2019.02.03',
+        article : '[CGV판교점] 캐러멜 팝콘 1 + 1 행사',
+      },
+      {
+        classidx : 0,
+        class : '전체',
+        date : '2020.04.11',
+        article : '[사전예약] 어바웃타임 재상영 티켓 사전 예약',
+      },
+      {
+        classidx : 1,
+        class : '평택',
+        date : '2019.02.04',
+        article : '[CGV평택점] 학생 영화 반값 할인 행사~',
+      },
+      {
+        classidx : 0,
+        class : '전체',
+        date : '2020.06.23',
+        article : '[전체] 메가박스 10주년 기념 행사 안내',
+      },
+    ]
 
     return (
       <div className="Page8">
@@ -364,6 +411,43 @@ class Page8 extends Component {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        {/* 헬프 */}
+        <section id="help">
+          <div className="container">
+            <div className="help clearfix">
+              <article className="help_box1">
+                <h3>공지사항</h3>
+                <div className="notice">
+                  <ul>
+                    <li
+                      className={this.state.noticeidx === 0 ? "active" : ""}
+                      onClick={(e) => this.changenotice(e, 0)}>
+                      <a href="#">전체 공지</a>
+                    </li>
+                    <li
+                      className={this.state.noticeidx === 1 ? "active" : ""}
+                      onClick={(e) => this.changenotice(e, 1)}>
+                      <a href="#">영화관 공지</a>
+                    </li>
+                  </ul>
+                  <ul className="content">
+                  {noticeArr.map((notice, idx) => (
+                    notice.classidx===this.state.noticeidx &&
+                    <li>
+                      <strong>{notice.class}</strong>
+                      <em>{notice.date}</em>
+                      <span>{notice.article}</span>
+                    </li>
+                  ))}
+                  </ul>
+                </div>
+              </article>
+              <article className="help_box2">
+              </article>
+              <article className="help_box3">b</article>
             </div>
           </div>
         </section>
